@@ -1,0 +1,2521 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jawara Cristal</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- CSS kamu -->
+  <link rel="stylesheet" href="checkout-style.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">
+      <img src="poto produk/logo putih.PNG" alt="Logo" width="80">
+      <h1>JAWARA CRISTAL</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Produk</a></li>
+        <li><a href="https://www.instagram.com/jawara.cristal">Testimoni</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h3>Pesanan <span class="red"></span></h3>
+
+  <!-- Alamat Pengiriman -->
+  <div class="box">
+    <h4 class="section-title">Alamat Pengiriman</h4>
+
+    <label>Nama Penerima</label>
+    <input type="text" placeholder="Tulis nama anda">
+
+    <label>Nomor Telepon Penerima</label>
+    <small>Contoh format: 081222333444</small>
+    <input type="tel" placeholder="Tulis nomor telepon anda">
+
+    <label>Alamat Lengkap</label>
+    <textarea rows="3" placeholder="Alamat lengkap..."></textarea>
+
+    <label>Kecamatan</label>
+    <input type="text" placeholder="Tulis kecamatan anda">
+
+    <!-- HAPUS input Kabupaten yang lama (kalau ada). Kita pakai dropdown custom di bawah -->
+    <label>Kelurahan</label>
+    <input type="text" placeholder="Tulis kelurahan anda">
+  </div>
+
+  <!-- Pilihan Kurir + Kabupaten -->
+  <div class="box">
+    <h4 class="section-title">Pilihan Kurir</h4>
+
+    <label>Kurir</label>
+    <select>
+      <option selected>CARGO</option>
+    </select>
+
+    <div class="dropdown-container">
+      <label for="cariKabupaten">Kabupaten</label>
+      <input type="text" id="cariKabupaten" placeholder="Ketik kabupaten/kecamatan..." autocomplete="off">
+      <div class="dropdown-list" id="daftarKabupaten" style="display:none;">
+        <!-- ==== ISI DAFTAR KABUPATEN/KOTA DI SINI (contoh sebagian) ==== -->
+        <!-- JAWA TIMUR -->
+       
+        <div class="dropdown-item">Jakarta Pusat/Gambir</div>         
+        <div class="dropdown-item">Jakarta Pusat/Johar Baru</div>
+        <div class="dropdown-item">Jakarta Pusat/Kemayoran</div>
+        <div class="dropdown-item">Jakarta Pusat/Menteng</div>
+        <div class="dropdown-item">Jakarta Pusat/Sawah Besar</div>
+        <div class="dropdown-item">Jakarta Pusat/Senen</div>
+        <div class="dropdown-item">Jakarta Pusat/Tanah Abang</div>
+
+        <div class="dropdown-item">Jakarta Utara/Cilincing</div>
+        <div class="dropdown-item">Jakarta Utara/Kelapa Gading</div>
+        <div class="dropdown-item">Jakarta Utara/Koja</div>
+        <div class="dropdown-item">Jakarta Utara/Pademangan</div>
+        <div class="dropdown-item">Jakarta Utara/Penjaringan</div>
+        <div class="dropdown-item">Jakarta Utara/Tanjung Priok</div>
+
+        <div class="dropdown-item">Jakarta Barat/Cengkareng</div>
+        <div class="dropdown-item">Jakarta Barat/Grogol Petamburan</div>
+        <div class="dropdown-item">Jakarta Barat/Kalideres</div>
+        <div class="dropdown-item">Jakarta Barat/Kebon Jeruk</div>
+        <div class="dropdown-item">Jakarta Barat/Kembangan</div>
+        <div class="dropdown-item">Jakarta Barat/Palmerah</div>
+        <div class="dropdown-item">Jakarta Barat/Taman Sari</div>
+        <div class="dropdown-item">Jakarta Barat/Tambora</div>
+
+        <div class="dropdown-item">Jakarta Selatan/Cilandak</div>
+        <div class="dropdown-item">Jakarta Selatan/Jagakarsa</div>
+        <div class="dropdown-item">Jakarta Selatan/Kemayoran Baru</div>
+        <div class="dropdown-item">Jakarta Selatan/Kemayoran Lama</div>
+        <div class="dropdown-item">Jakarta Selatan/Mampang Prapatan</div>
+        <div class="dropdown-item">Jakarta Selatan/Pancoran</div>
+        <div class="dropdown-item">Jakarta Selatan/Pasar Minggu</div>
+        <div class="dropdown-item">Jakarta Selatan/Pesanggrahan</div>
+        <div class="dropdown-item">Jakarta Selatan/Setiabudi</div>
+        <div class="dropdown-item">Jakarta Selatan/Tebet</div>
+
+        <div class="dropdown-item">Jakarta Timur/Cakung</div>
+        <div class="dropdown-item">Jakarta Timur/Cipayung</div>
+        <div class="dropdown-item">Jakarta Timur/Ciracas</div>
+        <div class="dropdown-item">Jakarta Timur/Duren Sawit</div>
+        <div class="dropdown-item">Jakarta Timur/Jatinegara</div>
+        <div class="dropdown-item">Jakarta Timur/Kramat Jati</div>
+        <div class="dropdown-item">Jakarta Timur/Makasar</div>
+        <div class="dropdown-item">Jakarta Timur/Matraman</div>
+        <div class="dropdown-item">Jakarta Timur/Pasar Rebo</div>
+        <div class="dropdown-item">Jakarta Timur/Pulugadung</div>
+
+        <div class="dropdown-item">Tangerang/Balaraja</div>
+        <div class="dropdown-item">Tangerang/Cisauk</div>
+        <div class="dropdown-item">Tangerang/Cikupa</div>
+        <div class="dropdown-item">Tangerang/Curug</div>
+        <div class="dropdown-item">Tangerang/Gunung Kaler</div>
+        <div class="dropdown-item">Tangerang/Jambe</div>
+        <div class="dropdown-item">Tangerang/Jayanti</div>
+        <div class="dropdown-item">Tangerang/Kelapa Dua</div>
+        <div class="dropdown-item">Tangerang/Kemiri</div>
+        <div class="dropdown-item">Tangerang/Kosambi</div>
+        <div class="dropdown-item">Tangerang/Kronjo</div>
+        <div class="dropdown-item">Tangerang/Legok</div>
+        <div class="dropdown-item">Tangerang/Mauk</div>
+        <div class="dropdown-item">Tangerang/Mekar Baru</div>
+        <div class="dropdown-item">Tangerang/Panongan</div>
+        <div class="dropdown-item">Tangerang/Pasar Kemis</div>
+        <div class="dropdown-item">Tangerang/Rajeg</div>
+        <div class="dropdown-item">Tangerang/Sepatan</div>
+        <div class="dropdown-item">Tangerang/Sepatan Timur</div>
+        <div class="dropdown-item">Tangerang/Sindang Jaya</div>
+        <div class="dropdown-item">Tangerang/Solear</div>
+        <div class="dropdown-item">Tangerang/Sukadiri</div>
+        <div class="dropdown-item">Tangerang/Sukamulya</div>
+        <div class="dropdown-item">Tangerang/Teluknaga</div>
+        <div class="dropdown-item">Tangerang/Tigaraksa</div>
+
+        <div class="dropdown-item">Lebak/Rangkasbitung</div>
+        <div class="dropdown-item">Lebak/Cibadak</div>
+        <div class="dropdown-item">Lebak/Warunggunung</div>
+        <div class="dropdown-item">Lebak/Maja</div>
+      <div class="dropdown-item">Lebak/Cipanas</div>
+      <div class="dropdown-item">Lebak/Muncang</div>
+<div class="dropdown-item">Lebak/Leuwidamar</div>
+      <div class="dropdown-item">Lebak/Bojongmanik</div>
+<div class="dropdown-item">Lebak/Cijaku</div>
+<div class="dropdown-item">Lebak/Malingping</div>
+<div class="dropdown-item">Lebak/Panggarangan</div>
+<div class="dropdown-item">Lebak/Bayah</div>
+<div class="dropdown-item">Lebak/Cibeber</div>
+<div class="dropdown-item">Lebak/Gunung Kencana</div>
+<div class="dropdown-item">Lebak/Sajira</div>
+<div class="dropdown-item">Lebak/Cikulur</div>
+<div class="dropdown-item">Lebak/Cileles</div>
+<div class="dropdown-item">Lebak/Cimarga</div>
+<div class="dropdown-item">Lebak/Banjarsari</div>
+      <div class="dropdown-item">Lebak/Curugbitung</div>
+<div class="dropdown-item">Lebak/Sobang</div>
+      <div class="dropdown-item">Lebak/Wanasalam</div>
+<div class="dropdown-item">Lebak/Cilograng</div>
+<div class="dropdown-item">Lebak/Cirinten</div>
+<div class="dropdown-item">Lebak/Kalanganyar</div>
+<div class="dropdown-item">Lebak/Cigemblong</div>
+      <div class="dropdown-item">Lebak/Lebakgedong</div>
+      <div class="dropdown-item">Lebak/Cihara</div>
+
+      <div class="dropdown-item">Pandeglang/Pandeglang</div>
+<div class="dropdown-item">Pandeglang/Majasari</div>
+<div class="dropdown-item">Pandeglang/Cadasari</div>
+<div class="dropdown-item">Pandeglang/Kaduhejo</div>
+<div class="dropdown-item">Pandeglang/Menes</div>
+<div class="dropdown-item">Pandeglang/Banjar</div>
+<div class="dropdown-item">Pandeglang/Munjul</div>
+<div class="dropdown-item">Pandeglang/Angsana</div>
+<div class="dropdown-item">Pandeglang/Picung</div>
+<div class="dropdown-item">Pandeglang/Saketi</div>
+<div class="dropdown-item">Pandeglang/Pagelaran</div>
+<div class="dropdown-item">Pandeglang/Labuan</div>
+<div class="dropdown-item">Pandeglang/Carita</div>
+<div class="dropdown-item">Pandeglang/Jiput</div>
+<div class="dropdown-item">Pandeglang/Cikedal</div>
+<div class="dropdown-item">Pandeglang/Cimanuk</div>
+<div class="dropdown-item">Pandeglang/Cipeucang</div>
+<div class="dropdown-item">Pandeglang/Sukaresmi</div>
+<div class="dropdown-item">Pandeglang/Cisata</div>
+<div class="dropdown-item">Pandeglang/Pulosari</div>
+<div class="dropdown-item">Pandeglang/Mandalawangi</div>
+<div class="dropdown-item">Pandeglang/Cibitung</div>
+<div class="dropdown-item">Pandeglang/Mekarjaya</div>
+<div class="dropdown-item">Pandeglang/Cigeulis</div>
+<div class="dropdown-item">Pandeglang/Cibaliung</div>
+<div class="dropdown-item">Pandeglang/Cikeusik</div>
+<div class="dropdown-item">Pandeglang/Cimanggu</div>
+<div class="dropdown-item">Pandeglang/Sumur</div>
+
+<div class="dropdown-item">Kota Bandung/Andir</div>
+<div class="dropdown-item">Kota Bandung/Antapani</div>
+<div class="dropdown-item">Kota Bandung/Arcamanik</div>
+<div class="dropdown-item">Kota Bandung/Astana Anyar</div>
+<div class="dropdown-item">Kota Bandung/Babakan Ciparay</div>
+<div class="dropdown-item">Kota Bandung/Bandung Kidul</div>
+<div class="dropdown-item">Kota Bandung/Bandung Kulon</div>
+<div class="dropdown-item">Kota Bandung/Bandung Wetan</div>
+<div class="dropdown-item">Kota Bandung/Batununggal</div>
+<div class="dropdown-item">Kota Bandung/Bojongloa Kaler</div>
+<div class="dropdown-item">Kota Bandung/Bojongloa Kidul</div>
+<div class="dropdown-item">Kota Bandung/Buahbatu</div>
+<div class="dropdown-item">Kota Bandung/Cibeunying Kaler</div>
+<div class="dropdown-item">Kota Bandung/Cibeunying Kidul</div>
+<div class="dropdown-item">Kota Bandung/Cibiru</div>
+<div class="dropdown-item">Kota Bandung/Cicendo</div>
+<div class="dropdown-item">Kota Bandung/Cidadap</div>
+<div class="dropdown-item">Kota Bandung/Cinambo</div>
+<div class="dropdown-item">Kota Bandung/Coblong</div>
+<div class="dropdown-item">Kota Bandung/Gedebage</div>
+<div class="dropdown-item">Kota Bandung/Kiaracondong</div>
+<div class="dropdown-item">Kota Bandung/Lengkong</div>
+<div class="dropdown-item">Kota Bandung/Mandalajati</div>
+<div class="dropdown-item">Kota Bandung/Panyileukan</div>
+<div class="dropdown-item">Kota Bandung/Rancasari</div>
+<div class="dropdown-item">Kota Bandung/Regol</div>
+<div class="dropdown-item">Kota Bandung/Sukajadi</div>
+<div class="dropdown-item">Kota Bandung/Sukasari</div>
+<div class="dropdown-item">Kota Bandung/Sumur Bandung</div>
+<div class="dropdown-item">Kota Bandung/Ujungberung</div>
+
+<div class="dropdown-item">Bandung/Arjasari</div>
+<div class="dropdown-item">Bandung/Baleendah</div>
+<div class="dropdown-item">Bandung/Banjaran</div>
+<div class="dropdown-item">Bandung/Bojongsoang</div>
+<div class="dropdown-item">Bandung/Cangkuang</div>
+<div class="dropdown-item">Bandung/Cicalengka</div>
+<div class="dropdown-item">Bandung/Cikancung</div>
+<div class="dropdown-item">Bandung/Cilengkrang</div>
+<div class="dropdown-item">Bandung/Cileunyi</div>
+<div class="dropdown-item">Bandung/Cimaung</div>
+<div class="dropdown-item">Bandung/Cimenyan</div>
+<div class="dropdown-item">Bandung/Ciparay</div>
+<div class="dropdown-item">Bandung/Ciwidey</div>
+<div class="dropdown-item">Bandung/Dayeuhkolot</div>
+<div class="dropdown-item">Bandung/Ibun</div>
+<div class="dropdown-item">Bandung/Katapang</div>
+<div class="dropdown-item">Bandung/Kertasari</div>
+<div class="dropdown-item">Bandung/Kutawaringin</div>
+<div class="dropdown-item">Bandung/Majalaya</div>
+<div class="dropdown-item">Bandung/Margaasih</div>
+<div class="dropdown-item">Bandung/Margahayu</div>
+<div class="dropdown-item">Bandung/Nagreg</div>
+<div class="dropdown-item">Bandung/Pacet</div>
+<div class="dropdown-item">Bandung/Pameungpeuk</div>
+<div class="dropdown-item">Bandung/Pangalengan</div>
+<div class="dropdown-item">Bandung/Paseh</div>
+<div class="dropdown-item">Bandung/Pasirjambu</div>
+<div class="dropdown-item">Bandung/Rancabali</div>
+<div class="dropdown-item">Bandung/Rancaekek</div>
+<div class="dropdown-item">Bandung/Solokanjeruk</div>
+<div class="dropdown-item">Bandung/Soreang</div>
+
+<div class="dropdown-item">Bandung Barat/Batujajar</div>
+<div class="dropdown-item">Bandung Barat/Cihampelas</div>
+<div class="dropdown-item">Bandung Barat/Cikalong Wetan</div>
+<div class="dropdown-item">Bandung Barat/Cililin</div>
+<div class="dropdown-item">Bandung Barat/Cipatat</div>
+<div class="dropdown-item">Bandung Barat/Cipeundeuy</div>
+<div class="dropdown-item">Bandung Barat/Cipongkor</div>
+<div class="dropdown-item">Bandung Barat/Cisarua</div>
+<div class="dropdown-item">Bandung Barat/Gununghalu</div>
+<div class="dropdown-item">Bandung Barat/Lembang</div>
+<div class="dropdown-item">Bandung Barat/Ngamprah</div>
+<div class="dropdown-item">Bandung Barat/Padalarang</div>
+<div class="dropdown-item">Bandung Barat/Parongpong</div>
+<div class="dropdown-item">Bandung Barat/Rongga</div>
+<div class="dropdown-item">Bandung Barat/Saguling</div>
+<div class="dropdown-item">Bandung Barat/Sindangkerta</div>
+
+<div class="dropdown-item">Kota Banjar/Banjar</div>
+<div class="dropdown-item">Kota Banjar/Langensari</div>
+<div class="dropdown-item">Kota Banjar/Pataruman</div>
+<div class="dropdown-item">Kota Banjar/Purwaharja</div>
+
+<div class="dropdown-item">Bekasi/Babelan</div>
+<div class="dropdown-item">Bekasi/Bojongmangu</div>
+<div class="dropdown-item">Bekasi/Cabangbungin</div>
+<div class="dropdown-item">Bekasi/Cibarusah</div>
+<div class="dropdown-item">Bekasi/Cibitung</div>
+<div class="dropdown-item">Bekasi/Cikarang Barat</div>
+<div class="dropdown-item">Bekasi/Cikarang Pusat</div>
+<div class="dropdown-item">Bekasi/Cikarang Selatan</div>
+<div class="dropdown-item">Bekasi/Cikarang Timur</div>
+<div class="dropdown-item">Bekasi/Cikarang Utara</div>
+<div class="dropdown-item">Bekasi/Karangbahagia</div>
+<div class="dropdown-item">Bekasi/Kedungwaringin</div>
+<div class="dropdown-item">Bekasi/Muara Gembong</div>
+<div class="dropdown-item">Bekasi/Pebayuran</div>
+<div class="dropdown-item">Bekasi/Sukakarya</div>
+<div class="dropdown-item">Bekasi/Sukawangi</div>
+<div class="dropdown-item">Bekasi/Serang Baru</div>
+<div class="dropdown-item">Bekasi/Setu</div>
+<div class="dropdown-item">Bekasi/Tambelang</div>
+<div class="dropdown-item">Bekasi/Tambun Selatan</div>
+<div class="dropdown-item">Bekasi/Tambun Utara</div>
+<div class="dropdown-item">Bekasi/Tarumajaya</div>
+<div class="dropdown-item">Bekasi/Cikarang Kota* (tidak ada; gunakan 5 Cikarang di atas)</div>
+
+
+<div class="dropdown-item">Kota Bekasi/Bantar Gebang</div>
+<div class="dropdown-item">Kota Bekasi/Bekasi Barat</div>
+<div class="dropdown-item">Kota Bekasi/Bekasi Selatan</div>
+<div class="dropdown-item">Kota Bekasi/Bekasi Timur</div>
+<div class="dropdown-item">Kota Bekasi/Bekasi Utara</div>
+<div class="dropdown-item">Kota Bekasi/Jatiasih</div>
+<div class="dropdown-item">Kota Bekasi/Jatisampurna</div>
+<div class="dropdown-item">Kota Bekasi/Medansatria</div>
+<div class="dropdown-item">Kota Bekasi/Mustikajaya</div>
+<div class="dropdown-item">Kota Bekasi/Pondokgede</div>
+<div class="dropdown-item">Kota Bekasi/Pondokmelati</div>
+<div class="dropdown-item">Kota Bekasi/Rawalumbu</div>
+
+<div class="dropdown-item">Bogor/Babakan Madang</div>
+<div class="dropdown-item">Bogor/Bojonggede</div>
+<div class="dropdown-item">Bogor/Cariu</div>
+<div class="dropdown-item">Bogor/Ciampea</div>
+<div class="dropdown-item">Bogor/Cibinong</div>
+<div class="dropdown-item">Bogor/Cisarua</div>
+<div class="dropdown-item">Bogor/Citeureup</div>
+<div class="dropdown-item">Bogor/Dramaga</div>
+<div class="dropdown-item">Bogor/Gunung Putri</div>
+<div class="dropdown-item">Bogor/Gunung Sindur</div>
+<div class="dropdown-item">Bogor/Jasinga</div>
+<div class="dropdown-item">Bogor/Jonggol</div>
+<div class="dropdown-item">Bogor/Kemang</div>
+<div class="dropdown-item">Bogor/Klapanunggal</div>
+<div class="dropdown-item">Bogor/Leuwiliang</div>
+<div class="dropdown-item">Bogor/Leuwisadeng</div>
+<div class="dropdown-item">Bogor/Megamendung</div>
+<div class="dropdown-item">Bogor/Nanggung</div>
+<div class="dropdown-item">Bogor/Pamijahan</div>
+<div class="dropdown-item">Bogor/Parung</div>
+<div class="dropdown-item">Bogor/Parung Panjang</div>
+<div class="dropdown-item">Bogor/Rancabungur</div>
+<div class="dropdown-item">Bogor/Sukajaya</div>
+<div class="dropdown-item">Bogor/Sukamakmur</div>
+<div class="dropdown-item">Bogor/Sukaraja</div>
+<div class="dropdown-item">Bogor/Tajurhalang</div>
+<div class="dropdown-item">Bogor/Tamansari</div>
+<div class="dropdown-item">Bogor/Tanjungsari</div>
+<div class="dropdown-item">Bogor/Tenjo</div>
+<div class="dropdown-item">Bogor/Tenjolaya</div>
+<div class="dropdown-item">Bogor/Cigombong</div>
+<div class="dropdown-item">Bogor/Cigudeg</div>
+<div class="dropdown-item">Bogor/Cijeruk</div>
+<div class="dropdown-item">Bogor/Cileungsi</div>
+<div class="dropdown-item">Bogor/Ciomas</div>
+<div class="dropdown-item">Bogor/Cibungbulang</div>
+<div class="dropdown-item">Bogor/Ciseeng</div>
+<div class="dropdown-item">Bogor/Rumpin</div>
+<div class="dropdown-item">Bogor/Kelapa Nunggal</div>
+<div class="dropdown-item">Bogor/Cihideung</div>
+
+<div class="dropdown-item">Kota Bogor/Bogor Barat</div>
+<div class="dropdown-item">Kota Bogor/Bogor Selatan</div>
+<div class="dropdown-item">Kota Bogor/Bogor Tengah</div>
+<div class="dropdown-item">Kota Bogor/Bogor Timur</div>
+<div class="dropdown-item">Kota Bogor/Bogor Utara</div>
+<div class="dropdown-item">Kota Bogor/Tanah Sareal</div>
+
+<div class="dropdown-item">Kota Cimahi/Cimahi Selatan</div>
+<div class="dropdown-item">Kota Cimahi/Cimahi Tengah</div>
+<div class="dropdown-item">Kota Cimahi/Cimahi Utara</div>
+<div class="dropdown-item">Ciamis/Banjarsari</div>  
+<div class="dropdown-item">Ciamis/Baregbeg</div>  
+<div class="dropdown-item">Ciamis/Ciamis</div>  
+<div class="dropdown-item">Ciamis/Cidolog</div>  
+<div class="dropdown-item">Ciamis/Cijeungjing</div>  
+<div class="dropdown-item">Ciamis/Cikoneng</div>  
+<div class="dropdown-item">Ciamis/Cimaragas</div>  
+<div class="dropdown-item">Ciamis/Cipaku</div>  
+<div class="dropdown-item">Ciamis/Cisaga</div>  
+<div class="dropdown-item">Ciamis/Jatinagara</div>  
+<div class="dropdown-item">Ciamis/Kawali</div>  
+<div class="dropdown-item">Ciamis/Lakbok</div>  
+<div class="dropdown-item">Ciamis/Lumbung</div>  
+<div class="dropdown-item">Ciamis/Pamarican</div>  
+<div class="dropdown-item">Ciamis/Panawangan</div>  
+<div class="dropdown-item">Ciamis/Panjalu</div>  
+<div class="dropdown-item">Ciamis/Panjalu Utara</div>  
+<div class="dropdown-item">Ciamis/Panjalu Selatan</div>  
+<div class="dropdown-item">Ciamis/Panjalu Timur</div>  
+<div class="dropdown-item">Ciamis/Rancah</div>  
+<div class="dropdown-item">Ciamis/Rajadesa</div>  
+<div class="dropdown-item">Ciamis/Sadananya</div>  
+<div class="dropdown-item">Ciamis/Sindangkasih</div>  
+<div class="dropdown-item">Ciamis/Sukadana</div>  
+<div class="dropdown-item">Ciamis/Tambaksari</div>  
+<div class="dropdown-item">Ciamis/Purwadadi</div>  
+<div class="dropdown-item">Ciamis/Panumbangan</div>
+
+<div class="dropdown-item">Cianjur/Agrabinta</div>  
+<div class="dropdown-item">Cianjur/Bojongpicung</div>  
+<div class="dropdown-item">Cianjur/Cianjur</div>  
+<div class="dropdown-item">Cianjur/Cibeber</div>  
+<div class="dropdown-item">Cianjur/Cibinong</div>  
+<div class="dropdown-item">Cianjur/Cidaun</div>  
+<div class="dropdown-item">Cianjur/Cijati</div>  
+<div class="dropdown-item">Cianjur/Cikadu</div>  
+<div class="dropdown-item">Cianjur/Cikalongkulon</div>  
+<div class="dropdown-item">Cianjur/Cilaku</div>  
+<div class="dropdown-item">Cianjur/Cipanas</div>  
+<div class="dropdown-item">Cianjur/Ciranjang</div>  
+<div class="dropdown-item">Cianjur/Cugenang</div>  
+<div class="dropdown-item">Cianjur/Gekbrong</div>  
+<div class="dropdown-item">Cianjur/Haurwangi</div>  
+<div class="dropdown-item">Cianjur/Kadupandak</div>  
+<div class="dropdown-item">Cianjur/Karangtengah</div>  
+<div class="dropdown-item">Cianjur/Leles</div>  
+<div class="dropdown-item">Cianjur/Mande</div>  
+<div class="dropdown-item">Cianjur/Naringgul</div>  
+<div class="dropdown-item">Cianjur/Pacet</div>  
+<div class="dropdown-item">Cianjur/Pagelaran</div>  
+<div class="dropdown-item">Cianjur/Sindangbarang</div>  
+<div class="dropdown-item">Cianjur/Sukaluyu</div>  
+<div class="dropdown-item">Cianjur/Sukanagara</div>  
+<div class="dropdown-item">Cianjur/Sukaresmi</div>  
+<div class="dropdown-item">Cianjur/Takokak</div>  
+<div class="dropdown-item">Cianjur/Tanggeung</div>  
+<div class="dropdown-item">Cianjur/Waluran</div>  
+<div class="dropdown-item">Cianjur/Waringinkurung</div>  
+<div class="dropdown-item">Cianjur/Campaka</div>  
+<div class="dropdown-item">Cianjur/Campakamulya</div>
+
+<div class="dropdown-item">Cirebon/Astanajapura</div>  
+<div class="dropdown-item">Cirebon/Babakan</div>  
+<div class="dropdown-item">Cirebon/Beber</div>  
+<div class="dropdown-item">Cirebon/Ciledug</div>  
+<div class="dropdown-item">Cirebon/Ciwaringin</div>  
+<div class="dropdown-item">Cirebon/Depok</div>  
+<div class="dropdown-item">Cirebon/Dukupuntang</div>  
+<div class="dropdown-item">Cirebon/Gegesik</div>  
+<div class="dropdown-item">Cirebon/Gempol</div>  
+<div class="dropdown-item">Cirebon/Greged</div>  
+<div class="dropdown-item">Cirebon/Gunungjati</div>  
+<div class="dropdown-item">Cirebon/Jamblang</div>  
+<div class="dropdown-item">Cirebon/Kapetakan</div>  
+<div class="dropdown-item">Cirebon/Karangsembung</div>  
+<div class="dropdown-item">Cirebon/Karangwareng</div>  
+<div class="dropdown-item">Cirebon/Kedawung</div>  
+<div class="dropdown-item">Cirebon/Klangenan</div>  
+<div class="dropdown-item">Cirebon/Lemahabang</div>  
+<div class="dropdown-item">Cirebon/Losari</div>  
+<div class="dropdown-item">Cirebon/Mundu</div>  
+<div class="dropdown-item">Cirebon/Pabedilan</div>  
+<div class="dropdown-item">Cirebon/Pabuaran</div>  
+<div class="dropdown-item">Cirebon/Palimanan</div>  
+<div class="dropdown-item">Cirebon/Pangenan</div>  
+<div class="dropdown-item">Cirebon/Panguragan</div>  
+<div class="dropdown-item">Cirebon/Pasaleman</div>  
+<div class="dropdown-item">Cirebon/Plered</div>  
+<div class="dropdown-item">Cirebon/Plumbon</div>  
+<div class="dropdown-item">Cirebon/Sedong</div>  
+<div class="dropdown-item">Cirebon/Sumber</div>  
+<div class="dropdown-item">Cirebon/Suranenggala</div>  
+<div class="dropdown-item">Cirebon/Talun</div>  
+<div class="dropdown-item">Cirebon/Tengah Tani</div>  
+<div class="dropdown-item">Cirebon/Waled</div>  
+<div class="dropdown-item">Cirebon/Weru</div>  
+<div class="dropdown-item">Cirebon/Kaliwedi</div>  
+<div class="dropdown-item">Cirebon/Astanajapura Timur</div>  
+<div class="dropdown-item">Cirebon/Arjawinangun</div>  
+
+
+<div class="dropdown-item">Kota Cirebon/Harjamukti</div>  
+<div class="dropdown-item">Kota Cirebon/Kejaksan</div>  
+<div class="dropdown-item">Kota Cirebon/Kesambi</div>  
+<div class="dropdown-item">Kota Cirebon/Lemahwungkuk</div>  
+<div class="dropdown-item">Kota Cirebon/Pekalipan</div>
+
+<div class="dropdown-item">Kota Depok/Beji</div>  
+<div class="dropdown-item">Kota Depok/Bojongsari</div>  
+<div class="dropdown-item">Kota Depok/Cilodong</div>  
+<div class="dropdown-item">Kota Depok/Cimanggis</div>  
+<div class="dropdown-item">Kota Depok/Cinere</div>  
+<div class="dropdown-item">Kota Depok/Cipayung</div>  
+<div class="dropdown-item">Kota Depok/Limo</div>  
+<div class="dropdown-item">Kota Depok/Pancoran Mas</div>  
+<div class="dropdown-item">Kota Depok/Sawangan</div>  
+<div class="dropdown-item">Kota Depok/Sukmajaya</div>  
+<div class="dropdown-item">Kota Depok/Tapos</div>
+
+<div class="dropdown-item">Garut/Banyuresmi</div>  
+<div class="dropdown-item">Garut/Bayongbong</div>  
+<div class="dropdown-item">Garut/Bungbulang</div>  
+<div class="dropdown-item">Garut/Caringin</div>  
+<div class="dropdown-item">Garut/Cibalong</div>  
+<div class="dropdown-item">Garut/Cibatu</div>  
+<div class="dropdown-item">Garut/Cibiuk</div>  
+<div class="dropdown-item">Garut/Cigedug</div>  
+<div class="dropdown-item">Garut/Cihurip</div>  
+<div class="dropdown-item">Garut/Cikajang</div>  
+<div class="dropdown-item">Garut/Cikelet</div>  
+<div class="dropdown-item">Garut/Cilawu</div>  
+<div class="dropdown-item">Garut/Cisewu</div>  
+<div class="dropdown-item">Garut/Cisompet</div>  
+<div class="dropdown-item">Garut/Cisurupan</div>  
+<div class="dropdown-item">Garut/Garut Kota</div>  
+<div class="dropdown-item">Garut/Kadungora</div>  
+<div class="dropdown-item">Garut/Karangpawitan</div>  
+<div class="dropdown-item">Garut/Karangtengah</div>  
+<div class="dropdown-item">Garut/Kersamanah</div>  
+<div class="dropdown-item">Garut/Leles</div>  
+<div class="dropdown-item">Garut/Leuwigoong</div>  
+<div class="dropdown-item">Garut/Malangbong</div>  
+<div class="dropdown-item">Garut/Mekarmukti</div>  
+<div class="dropdown-item">Garut/Pakenjeng</div>  
+<div class="dropdown-item">Garut/Pameungpeuk</div>  
+<div class="dropdown-item">Garut/Pamulihan</div>  
+<div class="dropdown-item">Garut/Pangatikan</div>  
+<div class="dropdown-item">Garut/Pasirwangi</div>  
+<div class="dropdown-item">Garut/Samarang</div>  
+<div class="dropdown-item">Garut/Selaawi</div>  
+<div class="dropdown-item">Garut/Singajaya</div>  
+<div class="dropdown-item">Garut/Sucinaraja</div>  
+<div class="dropdown-item">Garut/Sukaresmi</div>  
+<div class="dropdown-item">Garut/Sukawening</div>  
+<div class="dropdown-item">Garut/Talegong</div>  
+<div class="dropdown-item">Garut/Tarogong Kaler</div>  
+<div class="dropdown-item">Garut/Tarogong Kidul</div>  
+<div class="dropdown-item">Garut/Wanaraja</div>  
+<div class="dropdown-item">Indramayu/Anjatan</div>  
+<div class="dropdown-item">Indramayu/Arahan</div>  
+<div class="dropdown-item">Indramayu/Balongan</div>  
+<div class="dropdown-item">Indramayu/Bangodua</div>  
+<div class="dropdown-item">Indramayu/Bongas</div>  
+<div class="dropdown-item">Indramayu/Cantigi</div>  
+<div class="dropdown-item">Indramayu/Cikedung</div>  
+<div class="dropdown-item">Indramayu/Gabuswetan</div>  
+<div class="dropdown-item">Indramayu/Gantar</div>  
+<div class="dropdown-item">Indramayu/Haurgeulis</div>  
+<div class="dropdown-item">Indramayu/Indramayu</div>  
+<div class="dropdown-item">Indramayu/Jatibarang</div>  
+<div class="dropdown-item">Indramayu/Juntinyuat</div>  
+<div class="dropdown-item">Indramayu/Kandanghaur</div>  
+<div class="dropdown-item">Indramayu/Karangampel</div>  
+<div class="dropdown-item">Indramayu/Kedokanbunder</div>  
+<div class="dropdown-item">Indramayu/Kertasemaya</div>  
+<div class="dropdown-item">Indramayu/Kroya</div>  
+<div class="dropdown-item">Indramayu/Lelea</div>  
+<div class="dropdown-item">Indramayu/Losarang</div>  
+<div class="dropdown-item">Indramayu/Lohbener</div>  
+<div class="dropdown-item">Indramayu/Pasekan</div>  
+<div class="dropdown-item">Indramayu/Patrol</div>  
+<div class="dropdown-item">Indramayu/Sindang</div>  
+<div class="dropdown-item">Indramayu/Sliyeg</div>  
+<div class="dropdown-item">Indramayu/Sukagumiwang</div>  
+<div class="dropdown-item">Indramayu/Sukra</div>  
+<div class="dropdown-item">Indramayu/Trisi</div>  
+<div class="dropdown-item">Indramayu/Tukdana</div>  
+<div class="dropdown-item">Indramayu/Widasari</div>
+
+<div class="dropdown-item">Karawang/Banyusari</div>  
+<div class="dropdown-item">Karawang/Batujaya</div>  
+<div class="dropdown-item">Karawang/Ciampel</div>  
+<div class="dropdown-item">Karawang/Cibuaya</div>  
+<div class="dropdown-item">Karawang/Cikampek</div>  
+<div class="dropdown-item">Karawang/Cilamaya Kulon</div>  
+<div class="dropdown-item">Karawang/Cilamaya Wetan</div>  
+<div class="dropdown-item">Karawang/Cilebar</div>  
+<div class="dropdown-item">Karawang/Jayakerta</div>  
+<div class="dropdown-item">Karawang/Jatisari</div>  
+<div class="dropdown-item">Karawang/Klari</div>  
+<div class="dropdown-item">Karawang/Kotabaru</div>  
+<div class="dropdown-item">Karawang/Kutawaluya</div>  
+<div class="dropdown-item">Karawang/Lemahabang</div>  
+<div class="dropdown-item">Karawang/Majalaya</div>  
+<div class="dropdown-item">Karawang/Pakisjaya</div>  
+<div class="dropdown-item">Karawang/Pangkalan</div>  
+<div class="dropdown-item">Karawang/Pedes</div>  
+<div class="dropdown-item">Karawang/Purwasari</div>  
+<div class="dropdown-item">Karawang/Rawamerta</div>  
+<div class="dropdown-item">Karawang/Rengasdengklok</div>  
+<div class="dropdown-item">Karawang/Tegalwaru</div>  
+<div class="dropdown-item">Karawang/Telukjambe Barat</div>  
+<div class="dropdown-item">Karawang/Telukjambe Timur</div>  
+<div class="dropdown-item">Karawang/Tirtajaya</div>  
+<div class="dropdown-item">Karawang/Tirtamulya</div>
+
+<div class="dropdown-item">Kuningan/Ciawigebang</div>  
+<div class="dropdown-item">Kuningan/Cibeureum</div>  
+<div class="dropdown-item">Kuningan/Cibingbin</div>  
+<div class="dropdown-item">Kuningan/Cidahu</div>  
+<div class="dropdown-item">Kuningan/Cigandamekar</div>  
+<div class="dropdown-item">Kuningan/Cigugur</div>  
+<div class="dropdown-item">Kuningan/Cilebak</div>  
+<div class="dropdown-item">Kuningan/Cilimus</div>  
+<div class="dropdown-item">Kuningan/Cimahi</div>  
+<div class="dropdown-item">Kuningan/Ciniru</div>  
+<div class="dropdown-item">Kuningan/Cipicung</div>  
+<div class="dropdown-item">Kuningan/Ciselang</div>  
+<div class="dropdown-item">Kuningan/Ciwaringin</div>  
+<div class="dropdown-item">Kuningan/Darma</div>  
+<div class="dropdown-item">Kuningan/Garawangi</div>  
+<div class="dropdown-item">Kuningan/Hantara</div>  
+<div class="dropdown-item">Kuningan/Jalaksana</div>  
+<div class="dropdown-item">Kuningan/Jalakuhurip</div>  
+<div class="dropdown-item">Kuningan/Jalatrang</div>  
+<div class="dropdown-item">Kuningan/Kadugede</div>  
+<div class="dropdown-item">Kuningan/Kalimanggis</div>  
+<div class="dropdown-item">Kuningan/Karama</div>  
+<div class="dropdown-item">Kuningan/Kuningan</div>  
+<div class="dropdown-item">Kuningan/Lebakwangi</div>  
+<div class="dropdown-item">Kuningan/Luragung</div>  
+<div class="dropdown-item">Kuningan/Maleber</div>  
+<div class="dropdown-item">Kuningan/Mandirancan</div>  
+<div class="dropdown-item">Kuningan/Nusaherang</div>  
+<div class="dropdown-item">Kuningan/Pancalang</div>  
+<div class="dropdown-item">Kuningan/Pasawahan</div>  
+<div class="dropdown-item">Kuningan/Selajambe</div>  
+<div class="dropdown-item">Kuningan/Sindangagung</div>
+
+<div class="dropdown-item">Majalengka/Argapura</div>  
+<div class="dropdown-item">Majalengka/Banjaran</div>  
+<div class="dropdown-item">Majalengka/Bantarujeg</div>  
+<div class="dropdown-item">Majalengka/Cigasong</div>  
+<div class="dropdown-item">Majalengka/Cikijing</div>  
+<div class="dropdown-item">Majalengka/Cingambul</div>  
+<div class="dropdown-item">Majalengka/Dawuan</div>  
+<div class="dropdown-item">Majalengka/Jatiwangi</div>  
+<div class="dropdown-item">Majalengka/Jatitujuh</div>  
+<div class="dropdown-item">Majalengka/Kadipaten</div>  
+<div class="dropdown-item">Majalengka/Kertajati</div>  
+<div class="dropdown-item">Majalengka/Lemahsugih</div>  
+<div class="dropdown-item">Majalengka/Ligung</div>  
+<div class="dropdown-item">Majalengka/Maja</div>  
+<div class="dropdown-item">Majalengka/Majalengka</div>  
+<div class="dropdown-item">Majalengka/Malasari</div>  
+<div class="dropdown-item">Majalengka/Palasah</div>  
+<div class="dropdown-item">Majalengka/Panyingkiran</div>  
+<div class="dropdown-item">Majalengka/Rajagaluh</div>  
+<div class="dropdown-item">Majalengka/Sindang</div>  
+<div class="dropdown-item">Majalengka/Sindangwangi</div>  
+<div class="dropdown-item">Majalengka/Sumberjaya</div>  
+<div class="dropdown-item">Majalengka/Talaga</div>   
+
+<div class="dropdown-item">Pangandaran/Cigugur</div>  
+<div class="dropdown-item">Pangandaran/Cijulang</div>  
+<div class="dropdown-item">Pangandaran/Cimerak</div>  
+<div class="dropdown-item">Pangandaran/Kalanganyar</div>  
+<div class="dropdown-item">Pangandaran/Langkaplancar</div>  
+<div class="dropdown-item">Pangandaran/Mangunjaya</div>  
+<div class="dropdown-item">Pangandaran/Padaherang</div>  
+<div class="dropdown-item">Pangandaran/Parigi</div>  
+<div class="dropdown-item">Pangandaran/Sidamulih</div>  
+<div class="dropdown-item">Pangandaran/Pangandaran</div>
+
+<div class="dropdown-item">Purwakarta/Babakan Cikao</div>  
+<div class="dropdown-item">Purwakarta/Bojong</div>  
+<div class="dropdown-item">Purwakarta/Bungursari</div>  
+<div class="dropdown-item">Purwakarta/Campaka</div>  
+<div class="dropdown-item">Purwakarta/Cibatu</div>  
+<div class="dropdown-item">Purwakarta/Darangdan</div>  
+<div class="dropdown-item">Purwakarta/Jatiluhur</div>  
+<div class="dropdown-item">Purwakarta/Kiarapedes</div>  
+<div class="dropdown-item">Purwakarta/Maniis</div>  
+<div class="dropdown-item">Purwakarta/Pasawahan</div>  
+<div class="dropdown-item">Purwakarta/Plered</div>  
+<div class="dropdown-item">Purwakarta/Pondoksalam</div>  
+<div class="dropdown-item">Purwakarta/Purwakarta</div>  
+<div class="dropdown-item">Purwakarta/Sukatani</div>  
+<div class="dropdown-item">Purwakarta/Sukasari</div>  
+<div class="dropdown-item">Purwakarta/Tegalwaru</div>  
+<div class="dropdown-item">Purwakarta/Wanayasa</div>
+
+<div class="dropdown-item">Subang/Binusari</div>  
+<div class="dropdown-item">Subang/Binuang</div>  
+<div class="dropdown-item">Subang/Binong</div>  
+<div class="dropdown-item">Subang/Blanakan</div>  
+<div class="dropdown-item">Subang/Ciasem</div>  
+<div class="dropdown-item">Subang/Cibogo</div>  
+<div class="dropdown-item">Subang/Cijambe</div>  
+<div class="dropdown-item">Subang/Cikaum</div>  
+<div class="dropdown-item">Subang/Cipeundeuy</div>  
+<div class="dropdown-item">Subang/Cipunagara</div>  
+<div class="dropdown-item">Subang/Cisalak</div>  
+
+<div class="dropdown-item">Subang/Jalancagak</div>  
+<div class="dropdown-item">Subang/Kalijati</div>  
+<div class="dropdown-item">Subang/Kasomalang</div>  
+<div class="dropdown-item">Subang/Legonkulon</div>  
+<div class="dropdown-item">Subang/Pabuaran</div>  
+<div class="dropdown-item">Subang/Pagaden</div>  
+<div class="dropdown-item">Subang/Pagaden Barat</div>  
+<div class="dropdown-item">Subang/Pamanukan</div>  
+<div class="dropdown-item">Subang/Pusakajaya</div>  
+<div class="dropdown-item">Subang/Pusakanagara</div>  
+<div class="dropdown-item">Subang/Sagalaherang</div>  
+<div class="dropdown-item">Subang/Serangpanjang</div>  
+<div class="dropdown-item">Subang/Sukasari</div>  
+<div class="dropdown-item">Subang/Tanjungsiang</div>
+
+<div class="dropdown-item">Sukabumi/Bantargadung</div>  
+<div class="dropdown-item">Sukabumi/Bojonggenteng</div>  
+<div class="dropdown-item">Sukabumi/Cibadak</div>  
+<div class="dropdown-item">Sukabumi/Cibitung</div>  
+<div class="dropdown-item">Sukabumi/Cicantayan</div>  
+<div class="dropdown-item">Sukabumi/Cicurug</div>  
+<div class="dropdown-item">Sukabumi/Cidadap</div>  
+<div class="dropdown-item">Sukabumi/Cidolog</div>  
+<div class="dropdown-item">Sukabumi/Ciemas</div>  
+<div class="dropdown-item">Sukabumi/Cikakak</div>  
+<div class="dropdown-item">Sukabumi/Cikembar</div>  
+<div class="dropdown-item">Sukabumi/Cikidang</div>  
+<div class="dropdown-item">Sukabumi/Cimanggu</div>  
+<div class="dropdown-item">Sukabumi/Ciracap</div>  
+<div class="dropdown-item">Sukabumi/Cireunghas</div>  
+<div class="dropdown-item">Sukabumi/Cisaat</div>  
+<div class="dropdown-item">Sukabumi/Cisolok</div>  
+<div class="dropdown-item">Sukabumi/Citengah</div>  
+<div class="dropdown-item">Sukabumi/Curugkembar</div>  
+<div class="dropdown-item">Sukabumi/Gegerbitung</div>  
+<div class="dropdown-item">Sukabumi/Gunungguruh</div>  
+<div class="dropdown-item">Sukabumi/Jampang Kulon</div>  
+<div class="dropdown-item">Sukabumi/Jampang Tengah</div>  
+<div class="dropdown-item">Sukabumi/Kali Bunder</div>  
+<div class="dropdown-item">Sukabumi/Kalapanunggal</div>  
+<div class="dropdown-item">Sukabumi/Kebonpedes</div>  
+<div class="dropdown-item">Sukabumi/Lengkong</div>  
+<div class="dropdown-item">Sukabumi/Nagrak</div>  
+<div class="dropdown-item">Sukabumi/Pabuaran</div>  
+<div class="dropdown-item">Sukabumi/Parakansalak</div>  
+<div class="dropdown-item">Sukabumi/Pelabuhan Ratu</div>  
+<div class="dropdown-item">Sukabumi/Purabaya</div>  
+<div class="dropdown-item">Sukabumi/Sagaranten</div>  
+<div class="dropdown-item">Sukabumi/Simbang</div>  
+<div class="dropdown-item">Sukabumi/Sirnaresmi</div>  
+<div class="dropdown-item">Sukabumi/Sukabumi</div>  
+<div class="dropdown-item">Sukabumi/Sukalarang</div>  
+<div class="dropdown-item">Sukabumi/Sukaraja</div>  
+<div class="dropdown-item">Sukabumi/Surade</div>  
+<div class="dropdown-item">Sukabumi/Tegalbuleud</div>  
+<div class="dropdown-item">Sukabumi/Waluran</div>  
+<div class="dropdown-item">Sukabumi/Warungkiara</div>
+
+<div class="dropdown-item">Sumedang/Buahdua</div>  
+<div class="dropdown-item">Sumedang/Cibugel</div>  
+<div class="dropdown-item">Sumedang/Cimalaka</div>  
+<div class="dropdown-item">Sumedang/Cimanggung</div>  
+<div class="dropdown-item">Sumedang/Cisarua</div>  
+<div class="dropdown-item">Sumedang/Cisitu</div>  
+<div class="dropdown-item">Sumedang/Conggeang</div>  
+<div class="dropdown-item">Sumedang/Ganeas</div>  
+<div class="dropdown-item">Sumedang/Jatigede</div>  
+<div class="dropdown-item">Sumedang/Jatinangor</div>  
+<div class="dropdown-item">Sumedang/Jatinunggal</div>  
+<div class="dropdown-item">Sumedang/Pamulihan</div>  
+<div class="dropdown-item">Sumedang/Paseh</div>  
+<div class="dropdown-item">Sumedang/Rancakalong</div>  
+<div class="dropdown-item">Sumedang/Situraja</div>  
+<div class="dropdown-item">Sumedang/Sumedang Selatan</div>  
+<div class="dropdown-item">Sumedang/Sumedang Utara</div>  
+<div class="dropdown-item">Sumedang/Surian</div>  
+<div class="dropdown-item">Sumedang/Tanjungkerta</div>  
+<div class="dropdown-item">Sumedang/Tanjungmedar</div>  
+<div class="dropdown-item">Sumedang/Tanjungsari</div>  
+<div class="dropdown-item">Sumedang/Tomo</div>  
+<div class="dropdown-item">Sumedang/Ujungjaya</div>  
+<div class="dropdown-item">Sumedang/Wado</div>
+
+<div class="dropdown-item">Tasikmalaya/Bantarkalong</div>  
+<div class="dropdown-item">Tasikmalaya/Bojongasih</div>  
+<div class="dropdown-item">Tasikmalaya/Bojonggambir</div>  
+<div class="dropdown-item">Tasikmalaya/Ciawi</div>  
+<div class="dropdown-item">Tasikmalaya/Cibalong</div>  
+<div class="dropdown-item">Tasikmalaya/Cigalontang</div>  
+<div class="dropdown-item">Tasikmalaya/Cihideung</div>  
+<div class="dropdown-item">Tasikmalaya/Cikalong</div>  
+<div class="dropdown-item">Tasikmalaya/Cikatomas</div>  
+<div class="dropdown-item">Tasikmalaya/Cineam</div>  
+<div class="dropdown-item">Tasikmalaya/Cipatujah</div>  
+<div class="dropdown-item">Tasikmalaya/Cisayong</div>  
+<div class="dropdown-item">Tasikmalaya/Culamega</div>  
+<div class="dropdown-item">Tasikmalaya/Gunungtanjung</div>  
+<div class="dropdown-item">Tasikmalaya/Jamanis</div>  
+<div class="dropdown-item">Tasikmalaya/Jatiwaras</div>  
+<div class="dropdown-item">Tasikmalaya/Kadipaten</div>  
+<div class="dropdown-item">Tasikmalaya/Karangjaya</div>  
+<div class="dropdown-item">Tasikmalaya/Kawalu</div>  
+<div class="dropdown-item">Tasikmalaya/Leuwisari</div>  
+<div class="dropdown-item">Tasikmalaya/Mangunreja</div>  
+<div class="dropdown-item">Tasikmalaya/Manonjaya</div>  
+<div class="dropdown-item">Tasikmalaya/Padakembang</div>  
+<div class="dropdown-item">Tasikmalaya/Pagerageung</div>  
+<div class="dropdown-item">Tasikmalaya/Pancatengah</div>  
+<div class="dropdown-item">Tasikmalaya/Parungponteng</div>  
+<div class="dropdown-item">Tasikmalaya/Purbaratu</div>  
+<div class="dropdown-item">Tasikmalaya/Rajapolah</div>  
+<div class="dropdown-item">Tasikmalaya/Sariwangi</div>  
+<div class="dropdown-item">Tasikmalaya/Singaparna</div>  
+<div class="dropdown-item">Tasikmalaya/Sodonghilir</div>  
+<div class="dropdown-item">Tasikmalaya/Sukahening</div>  
+<div class="dropdown-item">Tasikmalaya/Sukarame</div>  
+<div class="dropdown-item">Tasikmalaya/Sukaratu</div>  
+<div class="dropdown-item">Tasikmalaya/Sukaresik</div>  
+<div class="dropdown-item">Tasikmalaya/Tanjungjaya</div>  
+<div class="dropdown-item">Tasikmalaya/Taraju</div>
+
+<div class="dropdown-item">Kota Tasikmalaya/Bungursari</div>  
+<div class="dropdown-item">Kota Tasikmalaya/Cibeureum</div>  
+<div class="dropdown-item">Kota Tasikmalaya/Cihideung</div>  
+<div class="dropdown-item">Kota Tasikmalaya/Cipedes</div>  
+<div class="dropdown-item">Kota Tasikmalaya/Indihiang</div>  
+<div class="dropdown-item">Kota Tasikmalaya/Kawalu</div>  
+<div class="dropdown-item">Kota Tasikmalaya/Mangkubumi</div>  
+<div class="dropdown-item">Kota Tasikmalaya/Purbaratu</div>  
+<div class="dropdown-item">Kota Tasikmalaya/Tamansari</div>  
+<div class="dropdown-item">Kota Tasikmalaya/Tawang</div>
+
+<div class="dropdown-item">Banyumas/Ajibarang</div>
+<div class="dropdown-item">Banyumas/Banyumas</div>
+<div class="dropdown-item">Banyumas/Baturaden</div>
+<div class="dropdown-item">Banyumas/Cilongok</div>
+<div class="dropdown-item">Banyumas/Gumelar</div>
+<div class="dropdown-item">Banyumas/Jatilawang</div>
+<div class="dropdown-item">Banyumas/Kalibagor</div>
+<div class="dropdown-item">Banyumas/Karanglewas</div>
+<div class="dropdown-item">Banyumas/Kebasen</div>
+<div class="dropdown-item">Banyumas/Kedungbanteng</div>
+<div class="dropdown-item">Banyumas/Kembaran</div>
+<div class="dropdown-item">Banyumas/Lumbir</div>
+<div class="dropdown-item">Banyumas/Pekuncen</div>
+<div class="dropdown-item">Banyumas/Purwojati</div>
+<div class="dropdown-item">Banyumas/Rawalo</div>
+<div class="dropdown-item">Banyumas/Sokaraja</div>
+<div class="dropdown-item">Banyumas/Somatran</div>
+<div class="dropdown-item">Banyumas/Sumbang</div>
+<div class="dropdown-item">Banyumas/Sumpyuh</div>
+<div class="dropdown-item">Banyumas/Tambak</div>
+<div class="dropdown-item">Banyumas/Wangon</div>
+
+<div class="dropdown-item">Cilacap/Adipala</div>
+<div class="dropdown-item">Cilacap/Bantarsari</div>
+<div class="dropdown-item">Cilacap/Binangun</div>
+<div class="dropdown-item">Cilacap/Cilacap Selatan</div>
+<div class="dropdown-item">Cilacap/Cilacap Tengah</div>
+<div class="dropdown-item">Cilacap/Cilacap Utara</div>
+<div class="dropdown-item">Cilacap/Cimanggu</div>
+<div class="dropdown-item">Cilacap/Cipari</div>
+<div class="dropdown-item">Cilacap/Dayeuhluhur</div>
+<div class="dropdown-item">Cilacap/Gandrungmangu</div>
+<div class="dropdown-item">Cilacap/Jeruklegi</div>
+<div class="dropdown-item">Cilacap/Kampung Laut</div>
+<div class="dropdown-item">Cilacap/Karangpucung</div>
+<div class="dropdown-item">Cilacap/Kawunganten</div>
+<div class="dropdown-item">Cilacap/Kedungreja</div>
+<div class="dropdown-item">Cilacap/Kesugihan</div>
+<div class="dropdown-item">Cilacap/Kroya</div>
+<div class="dropdown-item">Cilacap/Majenang</div>
+<div class="dropdown-item">Cilacap/Maos</div>
+<div class="dropdown-item">Cilacap/Nusawungu</div>
+<div class="dropdown-item">Cilacap/Patimuan</div>
+<div class="dropdown-item">Cilacap/Sampang</div>
+<div class="dropdown-item">Cilacap/Sidareja</div>
+<div class="dropdown-item">Cilacap/Wanareja</div>
+
+<div class="dropdown-item">Purbalingga/Bobotsari</div>
+<div class="dropdown-item">Purbalingga/Bojongsari</div>
+<div class="dropdown-item">Purbalingga/Bukateja</div>
+<div class="dropdown-item">Purbalingga/Kaligondang</div>
+<div class="dropdown-item">Purbalingga/Kalimanah</div>
+<div class="dropdown-item">Purbalingga/Karanganyar</div>
+<div class="dropdown-item">Purbalingga/Karangjambu</div>
+<div class="dropdown-item">Purbalingga/Karangmoncol</div>
+<div class="dropdown-item">Purbalingga/Karangreja</div>
+<div class="dropdown-item">Purbalingga/Kejobong</div>
+<div class="dropdown-item">Purbalingga/Kemangkon</div>
+<div class="dropdown-item">Purbalingga/Kertanegara</div>
+<div class="dropdown-item">Purbalingga/Kutasari</div>
+<div class="dropdown-item">Purbalingga/Mrebet</div>
+<div class="dropdown-item">Purbalingga/Padamara</div>
+<div class="dropdown-item">Purbalingga/Pengadegan</div>
+<div class="dropdown-item">Purbalingga/Purbalingga</div>
+<div class="dropdown-item">Purbalingga/Rembang</div>
+
+<div class="dropdown-item">Banjarnegara/Banjarmangu</div>
+<div class="dropdown-item">Banjarnegara/Banjarnegara</div>
+<div class="dropdown-item">Banjarnegara/Batur</div>
+<div class="dropdown-item">Banjarnegara/Bawang</div>
+<div class="dropdown-item">Banjarnegara/Kalibening</div>
+<div class="dropdown-item">Banjarnegara/Karangkobar</div>
+<div class="dropdown-item">Banjarnegara/Madukara</div>
+<div class="dropdown-item">Banjarnegara/Mandiraja</div>
+<div class="dropdown-item">Banjarnegara/Pagedongan</div>
+<div class="dropdown-item">Banjarnegara/Pagentan</div>
+<div class="dropdown-item">Banjarnegara/Pandanarum</div>
+<div class="dropdown-item">Banjarnegara/Pejawaran</div>
+<div class="dropdown-item">Banjarnegara/Punggelan</div>
+<div class="dropdown-item">Banjarnegara/Purwanegara</div>
+<div class="dropdown-item">Banjarnegara/Purwareja Klampok</div>
+<div class="dropdown-item">Banjarnegara/Rakit</div>
+<div class="dropdown-item">Banjarnegara/Sigaluh</div>
+<div class="dropdown-item">Banjarnegara/Susukan</div>
+<div class="dropdown-item">Banjarnegara/Wanadadi</div>
+<div class="dropdown-item">Banjarnegara/Wanayasa</div>
+
+<div class="dropdown-item">Kebumen/Adimulyo</div>
+<div class="dropdown-item">Kebumen/Alian</div>
+<div class="dropdown-item">Kebumen/Ambal</div>
+<div class="dropdown-item">Kebumen/Ayah</div>
+<div class="dropdown-item">Kebumen/Bonorowo</div>
+<div class="dropdown-item">Kebumen/Buayan</div>
+<div class="dropdown-item">Kebumen/Buluspesantren</div>
+<div class="dropdown-item">Kebumen/Gombong</div>
+<div class="dropdown-item">Kebumen/Karanganyar</div>
+<div class="dropdown-item">Kebumen/Karanggayam</div>
+<div class="dropdown-item">Kebumen/Karangsambung</div>
+<div class="dropdown-item">Kebumen/Kebumen</div>
+<div class="dropdown-item">Kebumen/Klirong</div>
+<div class="dropdown-item">Kebumen/Kutowinangun</div>
+<div class="dropdown-item">Kebumen/Mirit</div>
+<div class="dropdown-item">Kebumen/Padureso</div>
+
+<div class="dropdown-item">Kebumen/Pejagoan</div>
+<div class="dropdown-item">Kebumen/Poncowarno</div>
+<div class="dropdown-item">Kebumen/Prembun</div>
+<div class="dropdown-item">Kebumen/Puring</div>
+<div class="dropdown-item">Kebumen/Purworejo Klampok</div>
+<div class="dropdown-item">Kebumen/Sadang</div>
+<div class="dropdown-item">Kebumen/Sempor</div>
+<div class="dropdown-item">Kebumen/Sruweng</div>
+
+<div class="dropdown-item">Wonosobo/Garung</div>
+<div class="dropdown-item">Wonosobo/Kalikajar</div>
+<div class="dropdown-item">Wonosobo/Kalikuning</div>
+<div class="dropdown-item">Wonosobo/Kaliwiro</div>
+<div class="dropdown-item">Wonosobo/Kejajar</div>
+<div class="dropdown-item">Wonosobo/Kepil</div>
+<div class="dropdown-item">Wonosobo/Kertek</div>
+<div class="dropdown-item">Wonosobo/Leksono</div>
+<div class="dropdown-item">Wonosobo/Mojotengah</div>
+<div class="dropdown-item">Wonosobo/Sapuran</div>
+<div class="dropdown-item">Wonosobo/Selomerto</div>
+<div class="dropdown-item">Wonosobo/Sukoharjo</div>
+<div class="dropdown-item">Wonosobo/Wadaslintang</div>
+<div class="dropdown-item">Wonosobo/Watumalang</div>
+<div class="dropdown-item">Wonosobo/Wonosobo</div>
+<div class="dropdown-item">Wonosobo/Wonotirto</div>
+
+<div class="dropdown-item">Purworejo/Bagelen</div>
+<div class="dropdown-item">Purworejo/Banyuurip</div>
+<div class="dropdown-item">Purworejo/Bayan</div>
+<div class="dropdown-item">Purworejo/Bener</div>
+<div class="dropdown-item">Purworejo/Bruno</div>
+<div class="dropdown-item">Purworejo/Butuh</div>
+<div class="dropdown-item">Purworejo/Gebang</div>
+<div class="dropdown-item">Purworejo/Grabag</div>
+<div class="dropdown-item">Purworejo/Kaligesing</div>
+<div class="dropdown-item">Purworejo/Loano</div>
+<div class="dropdown-item">Purworejo/Ngombol</div>
+<div class="dropdown-item">Purworejo/Pituruh</div>
+<div class="dropdown-item">Purworejo/Purwodadi</div>
+<div class="dropdown-item">Purworejo/Purworejo</div>
+
+<div class="dropdown-item">Magelang/Bandongan</div>
+<div class="dropdown-item">Magelang/Borobudur</div>
+<div class="dropdown-item">Magelang/Candimulyo</div>
+<div class="dropdown-item">Magelang/Dukun</div>
+<div class="dropdown-item">Magelang/Grabag</div>
+<div class="dropdown-item">Magelang/Kajoran</div>
+<div class="dropdown-item">Magelang/Kaliangkrik</div>
+<div class="dropdown-item">Magelang/Magelang Selatan</div>
+<div class="dropdown-item">Magelang/Magelang Tengah</div>
+<div class="dropdown-item">Magelang/Magelang Utara</div>
+<div class="dropdown-item">Magelang/Mertoyudan</div>
+<div class="dropdown-item">Magelang/Mungkid</div>
+<div class="dropdown-item">Magelang/Muntilan</div>
+<div class="dropdown-item">Magelang/Ngluwar</div>
+<div class="dropdown-item">Magelang/Pakis</div>
+<div class="dropdown-item">Magelang/Salam</div>
+<div class="dropdown-item">Magelang/Sawangan</div>
+<div class="dropdown-item">Magelang/Secang</div>
+<div class="dropdown-item">Magelang/Srumbung</div>
+<div class="dropdown-item">Magelang/Tegalrejo</div>
+<div class="dropdown-item">Magelang/Tempuran</div>
+<div class="dropdown-item">Magelang/Windusari</div>
+
+<div class="dropdown-item">Temanggung/Bansari</div>
+<div class="dropdown-item">Temanggung/Bejen</div>
+<div class="dropdown-item">Temanggung/Bulu</div>
+<div class="dropdown-item">Temanggung/Candiroto</div>
+<div class="dropdown-item">Temanggung/Gemawang</div>
+<div class="dropdown-item">Temanggung/Jumo</div>
+<div class="dropdown-item">Temanggung/Kaloran</div>
+<div class="dropdown-item">Temanggung/Kandangan</div>
+<div class="dropdown-item">Temanggung/Kedu</div>
+<div class="dropdown-item">Temanggung/Kledung</div>
+<div class="dropdown-item">Temanggung/Kranggan</div>
+<div class="dropdown-item">Temanggung/Ngadirejo</div>
+<div class="dropdown-item">Temanggung/Parakan</div>
+<div class="dropdown-item">Temanggung/Patean</div>
+<div class="dropdown-item">Temanggung/Pitu</div>
+<div class="dropdown-item">Temanggung/Selopampang</div>
+<div class="dropdown-item">Temanggung/Sukorejo</div>
+<div class="dropdown-item">Temanggung/Tembarak</div>
+<div class="dropdown-item">Temanggung/Temanggung</div>
+<div class="dropdown-item">Temanggung/Tlogomulyo</div>
+<div class="dropdown-item">Temanggung/Tretep</div>
+<div class="dropdown-item">Temanggung/Wonoboyo</div>
+
+<div class="dropdown-item">Semarang/Ambarawa</div>
+<div class="dropdown-item">Semarang/Bancak</div>
+<div class="dropdown-item">Semarang/Bandungan</div>
+<div class="dropdown-item">Semarang/Banyubiru</div>
+<div class="dropdown-item">Semarang/Bawen</div>
+<div class="dropdown-item">Semarang/Bergas</div>
+<div class="dropdown-item">Semarang/Bringin</div>
+<div class="dropdown-item">Semarang/Getasan</div>
+<div class="dropdown-item">Semarang/Jambu</div>
+<div class="dropdown-item">Semarang/Kaliwungu</div>
+<div class="dropdown-item">Semarang/Pabelan</div>
+<div class="dropdown-item">Semarang/Pagersari</div>
+<div class="dropdown-item">Semarang/Pringapus</div>
+<div class="dropdown-item">Semarang/Sumowono</div>
+<div class="dropdown-item">Semarang/Suruh</div>
+<div class="dropdown-item">Semarang/Susukan</div>
+<div class="dropdown-item">Semarang/Tengaran</div>
+<div class="dropdown-item">Semarang/Tuntang</div>
+<div class="dropdown-item">Semarang/Ungaran Barat</div>
+<div class="dropdown-item">Semarang/Ungaran Timur</div>
+
+<div class="dropdown-item">Kendal/Boja</div>
+<div class="dropdown-item">Kendal/Brangsong</div>
+<div class="dropdown-item">Kendal/Cepiring</div>
+<div class="dropdown-item">Kendal/Gemuh</div>
+<div class="dropdown-item">Kendal/Kaliwungu</div>
+<div class="dropdown-item">Kendal/Kaliwungu Selatan</div>
+<div class="dropdown-item">Kendal/Kangkung</div>
+<div class="dropdown-item">Kendal/Kendal</div>
+<div class="dropdown-item">Kendal/Limbangan</div>
+<div class="dropdown-item">Kendal/Ngayung</div>
+<div class="dropdown-item">Kendal/Pageruyung</div>
+<div class="dropdown-item">Kendal/Patean</div>
+<div class="dropdown-item">Kendal/Patebon</div>
+<div class="dropdown-item">Kendal/Pegandon</div>
+<div class="dropdown-item">Kendal/Plantungan</div>
+<div class="dropdown-item">Kendal/Ringinarum</div>
+<div class="dropdown-item">Kendal/Rowosari</div>
+<div class="dropdown-item">Kendal/Singorojo</div>
+<div class="dropdown-item">Kendal/Sukorejo</div>
+<div class="dropdown-item">Kendal/Weleri</div>
+
+<div class="dropdown-item">Batang/Bandar</div>
+<div class="dropdown-item">Batang/Banyuputih</div>
+<div class="dropdown-item">Batang/Blado</div>
+<div class="dropdown-item">Batang/Gringsing</div>
+<div class="dropdown-item">Batang/Kandeman</div>
+<div class="dropdown-item">Batang/Limpung</div>
+<div class="dropdown-item">Batang/Pecalungan</div>
+<div class="dropdown-item">Batang/Reban</div>
+<div class="dropdown-item">Batang/Subah</div>
+<div class="dropdown-item">Batang/Tersono</div>
+<div class="dropdown-item">Batang/Tulis</div>
+<div class="dropdown-item">Batang/Warungasem</div>
+<div class="dropdown-item">Batang/Wonotunggal</div>
+<div class="dropdown-item">Batang/Batang</div>
+
+<div class="dropdown-item">Pekalongan/Buaran</div>
+<div class="dropdown-item">Pekalongan/Doro</div>
+<div class="dropdown-item">Pekalongan/Kajen</div>
+<div class="dropdown-item">Pekalongan/Kandangserang</div>
+<div class="dropdown-item">Pekalongan/Karanganyar</div>
+<div class="dropdown-item">Pekalongan/Kedungwuni</div>
+<div class="dropdown-item">Pekalongan/Kesesi</div>
+<div class="dropdown-item">Pekalongan/Lebakbarang</div>
+<div class="dropdown-item">Pekalongan/Panunggalan</div>
+<div class="dropdown-item">Pekalongan/Petungkriyono</div>
+<div class="dropdown-item">Pekalongan/Siwalan</div>
+<div class="dropdown-item">Pekalongan/Sragi</div>
+<div class="dropdown-item">Pekalongan/Talun</div>
+<div class="dropdown-item">Pekalongan/Tirto</div>
+<div class="dropdown-item">Pekalongan/Wiradesa</div>
+<div class="dropdown-item">Pekalongan/Wonokerto</div>
+<div class="dropdown-item">Pekalongan/Wonopringgo</div>
+
+<div class="dropdown-item">Pemalang/Ampelgading</div>
+<div class="dropdown-item">Pemalang/Bantarbolang</div>
+<div class="dropdown-item">Pemalang/Belik</div>
+<div class="dropdown-item">Pemalang/Bodeh</div>
+<div class="dropdown-item">Pemalang/Comal</div>
+<div class="dropdown-item">Pemalang/Moga</div>
+<div class="dropdown-item">Pemalang/Pemalang</div>
+<div class="dropdown-item">Pemalang/Petarukan</div>
+<div class="dropdown-item">Pemalang/Pulosari</div>
+<div class="dropdown-item">Pemalang/Randudongkal</div>
+<div class="dropdown-item">Pemalang/Taman</div>
+<div class="dropdown-item">Pemalang/Ulujami</div>
+<div class="dropdown-item">Pemalang/Warungpring</div>
+<div class="dropdown-item">Pemalang/Watukumpul</div>
+
+<div class="dropdown-item">Tegal/Adiwerna</div>
+<div class="dropdown-item">Tegal/Balapulang</div>
+<div class="dropdown-item">Tegal/Bojong</div>
+<div class="dropdown-item">Tegal/Dukuhturi</div>
+<div class="dropdown-item">Tegal/Dukuhwaru</div>
+<div class="dropdown-item">Tegal/Jatinegara</div>
+<div class="dropdown-item">Tegal/Kedungbanteng</div>
+<div class="dropdown-item">Tegal/Kramat</div>
+<div class="dropdown-item">Tegal/Lebaksiu</div>
+<div class="dropdown-item">Tegal/Margasari</div>
+<div class="dropdown-item">Tegal/Pagerbarang</div>
+<div class="dropdown-item">Tegal/Pangkah</div>
+<div class="dropdown-item">Tegal/Slawi</div>
+<div class="dropdown-item">Tegal/Suradadi</div>
+<div class="dropdown-item">Tegal/Talang</div>
+<div class="dropdown-item">Tegal/Tarub</div>
+<div class="dropdown-item">Tegal/Warureja</div>
+
+<div class="dropdown-item">Brebes/Banjarharjo</div>
+<div class="dropdown-item">Brebes/Bantarkawung</div>
+<div class="dropdown-item">Brebes/Brebes</div>
+<div class="dropdown-item">Brebes/Bulakamba</div>
+<div class="dropdown-item">Brebes/Jatibarang</div>
+<div class="dropdown-item">Brebes/Kersana</div>
+<div class="dropdown-item">Brebes/Losari</div>
+<div class="dropdown-item">Brebes/Larangan</div>
+<div class="dropdown-item">Brebes/Paguyangan</div>
+<div class="dropdown-item">Brebes/Sirampog</div>
+<div class="dropdown-item">Brebes/Songgom</div>
+<div class="dropdown-item">Brebes/Tanjung</div>
+<div class="dropdown-item">Brebes/Tonjong</div>
+<div class="dropdown-item">Brebes/Wanasari</div>
+<div class="dropdown-item">Brebes/Salem</div>
+
+<div class="dropdown-item">Jepara/Bangsri</div>
+<div class="dropdown-item">Jepara/Batealit</div>
+<div class="dropdown-item">Jepara/Donorojo</div>
+<div class="dropdown-item">Jepara/Kalinyamatan</div>
+<div class="dropdown-item">Jepara/Karimunjawa</div>
+<div class="dropdown-item">Jepara/Kedung</div>
+<div class="dropdown-item">Jepara/Keling</div>
+<div class="dropdown-item">Jepara/Kembang</div>
+<div class="dropdown-item">Jepara/Mayong</div>
+<div class="dropdown-item">Jepara/Mlonggo</div>
+<div class="dropdown-item">Jepara/Nalumsari</div>
+<div class="dropdown-item">Jepara/Pakis Aji</div>
+<div class="dropdown-item">Jepara/Pecangaan</div>
+<div class="dropdown-item">Jepara/Tahunan</div>
+<div class="dropdown-item">Jepara/Jepara</div>
+<div class="dropdown-item">Jepara/Welahan</div>
+
+<div class="dropdown-item">Kudus/Bae</div>
+<div class="dropdown-item">Kudus/Dawe</div>
+<div class="dropdown-item">Kudus/Gebog</div>
+<div class="dropdown-item">Kudus/Jati</div>
+<div class="dropdown-item">Kudus/Jekulo</div>
+<div class="dropdown-item">Kudus/Kaliwungu</div>
+<div class="dropdown-item">Kudus/Kota Kudus</div>
+<div class="dropdown-item">Kudus/Mejobo</div>
+<div class="dropdown-item">Kudus/Undaan</div>
+
+<div class="dropdown-item">Demak/Bonang</div>
+<div class="dropdown-item">Demak/Dempet</div>
+<div class="dropdown-item">Demak/Demak</div>
+<div class="dropdown-item">Demak/Gajah</div>
+<div class="dropdown-item">Demak/Guntur</div>
+<div class="dropdown-item">Demak/Karanganyar</div>
+<div class="dropdown-item">Demak/Karangawen</div>
+<div class="dropdown-item">Demak/Karangtengah</div>
+<div class="dropdown-item">Demak/Kebonagung</div>
+<div class="dropdown-item">Demak/Mijen</div>
+<div class="dropdown-item">Demak/Mranggen</div>
+<div class="dropdown-item">Demak/Sayung</div>
+<div class="dropdown-item">Demak/Wedung</div>
+<div class="dropdown-item">Demak/Wonosalam</div>
+
+<div class="dropdown-item">Grobogan/Brati</div>
+<div class="dropdown-item">Grobogan/Gabus</div>
+<div class="dropdown-item">Grobogan/Geyer</div>
+<div class="dropdown-item">Grobogan/Godong</div>
+<div class="dropdown-item">Grobogan/Grobogan</div>
+<div class="dropdown-item">Grobogan/Gubug</div>
+<div class="dropdown-item">Grobogan/Karangrayung</div>
+<div class="dropdown-item">Grobogan/Kedungjati</div>
+<div class="dropdown-item">Grobogan/Klambu</div>
+<div class="dropdown-item">Grobogan/Krangganharjo</div>
+<div class="dropdown-item">Grobogan/Pulokulon</div>
+<div class="dropdown-item">Grobogan/Purwodadi</div>
+<div class="dropdown-item">Grobogan/Tanggungharjo</div>
+<div class="dropdown-item">Grobogan/Tawangharjo</div>
+<div class="dropdown-item">Grobogan/Tegowanu</div>
+<div class="dropdown-item">Grobogan/Toroh</div>
+<div class="dropdown-item">Grobogan/Wirosari</div>
+
+<div class="dropdown-item">Blora/Banjarejo</div>
+<div class="dropdown-item">Blora/Bogorejo</div>
+<div class="dropdown-item">Blora/Blora</div>
+<div class="dropdown-item">Blora/Cepu</div>
+<div class="dropdown-item">Blora/Japah</div>
+<div class="dropdown-item">Blora/Jati</div>
+<div class="dropdown-item">Blora/Jepon</div>
+<div class="dropdown-item">Blora/Jiken</div>
+<div class="dropdown-item">Blora/Kedungtuban</div>
+<div class="dropdown-item">Blora/Kunduran</div>
+<div class="dropdown-item">Blora/Ngawen</div>
+<div class="dropdown-item">Blora/Randublatung</div>
+<div class="dropdown-item">Blora/Sambong</div>
+<div class="dropdown-item">Blora/Todanan</div>
+<div class="dropdown-item">Blora/Tunjungan</div>
+
+<div class="dropdown-item">Rembang/Bulu</div>
+<div class="dropdown-item">Rembang/Gunem</div>
+<div class="dropdown-item">Rembang/Kaliori</div>
+<div class="dropdown-item">Rembang/Kragan</div>
+<div class="dropdown-item">Rembang/Lasem</div>
+<div class="dropdown-item">Rembang/Pamotan</div>
+<div class="dropdown-item">Rembang/Pancur</div>
+<div class="dropdown-item">Rembang/Rembang</div>
+<div class="dropdown-item">Rembang/Sale</div>
+<div class="dropdown-item">Rembang/Sarang</div>
+<div class="dropdown-item">Rembang/Sulang</div>
+<div class="dropdown-item">Rembang/Sumber</div>
+
+<div class="dropdown-item">Pati/Batangan</div>
+<div class="dropdown-item">Pati/Cluwak</div>
+<div class="dropdown-item">Pati/Dukuhseti</div>
+<div class="dropdown-item">Pati/Gabus</div>
+<div class="dropdown-item">Pati/Gembong</div>
+<div class="dropdown-item">Pati/Gunungwungkal</div>
+<div class="dropdown-item">Pati/Jaken</div>
+<div class="dropdown-item">Pati/Jakenan</div>
+<div class="dropdown-item">Pati/Juwana</div>
+<div class="dropdown-item">Pati/Kayen</div>
+<div class="dropdown-item">Pati/Margorejo</div>
+<div class="dropdown-item">Pati/Margoyoso</div>
+<div class="dropdown-item">Pati/Pati</div>
+<div class="dropdown-item">Pati/Pucakwangi</div>
+<div class="dropdown-item">Pati/Sukolilo</div>
+<div class="dropdown-item">Pati/Tambakromo</div>
+<div class="dropdown-item">Pati/Tayu</div>
+<div class="dropdown-item">Pati/Trangkil</div>
+<div class="dropdown-item">Pati/Wedarijaksa</div>
+<div class="dropdown-item">Pati/Winong</div>
+
+<div class="dropdown-item">Sragen/Gesi</div>
+<div class="dropdown-item">Sragen/Gondang</div>
+<div class="dropdown-item">Sragen/Jenar</div>
+<div class="dropdown-item">Sragen/Kalikotes</div>
+<div class="dropdown-item">Sragen/Kedawung</div>
+<div class="dropdown-item">Sragen/Masaran</div>
+<div class="dropdown-item">Sragen/Miri</div>
+<div class="dropdown-item">Sragen/Mondokan</div>
+<div class="dropdown-item">Sragen/Ngrampal</div>
+<div class="dropdown-item">Sragen/Pilangkenceng</div>
+<div class="dropdown-item">Sragen/Plupuh</div>
+<div class="dropdown-item">Sragen/Sambungmacan</div>
+<div class="dropdown-item">Sragen/Sidoharjo</div>
+<div class="dropdown-item">Sragen/Sukodono</div>
+<div class="dropdown-item">Sragen/Sumberlawang</div>
+<div class="dropdown-item">Sragen/Tangen</div>
+<div class="dropdown-item">Sragen/Tanon</div>
+<div class="dropdown-item">Sragen/Sragen</div>
+
+<div class="dropdown-item">Karanganyar/Colomadu</div>
+<div class="dropdown-item">Karanganyar/Gondangrejo</div>
+<div class="dropdown-item">Karanganyar/Jaten</div>
+<div class="dropdown-item">Karanganyar/Jatipuro</div>
+<div class="dropdown-item">Karanganyar/Jatiyoso</div>
+<div class="dropdown-item">Karanganyar/Jenawi</div>
+<div class="dropdown-item">Karanganyar/Jumantono</div>
+<div class="dropdown-item">Karanganyar/Jumapolo</div>
+<div class="dropdown-item">Karanganyar/Karanganyar</div>
+<div class="dropdown-item">Karanganyar/Karangpandan</div>
+<div class="dropdown-item">Karanganyar/Kerjo</div>
+<div class="dropdown-item">Karanganyar/Matesih</div>
+<div class="dropdown-item">Karanganyar/Mojogedang</div>
+<div class="dropdown-item">Karanganyar/Ngargoyoso</div>
+<div class="dropdown-item">Karanganyar/Tasikmadu</div>
+<div class="dropdown-item">Karanganyar/Tawangmangu</div>
+
+<div class="dropdown-item">Wonogiri/Baturetno</div>
+<div class="dropdown-item">Wonogiri/Batuwarno</div>
+<div class="dropdown-item">Wonogiri/Bulukerto</div>
+<div class="dropdown-item">Wonogiri/Eromoko</div>
+<div class="dropdown-item">Wonogiri/Girimarto</div>
+<div class="dropdown-item">Wonogiri/Giritontro</div>
+<div class="dropdown-item">Wonogiri/Giriwoyo</div>
+<div class="dropdown-item">Wonogiri/Jatipurno</div>
+<div class="dropdown-item">Wonogiri/Jatiroto</div>
+<div class="dropdown-item">Wonogiri/Jatisrono</div>
+<div class="dropdown-item">Wonogiri/Karangtengah</div>
+<div class="dropdown-item">Wonogiri/Kismantoro</div>
+<div class="dropdown-item">Wonogiri/Manyaran</div>
+<div class="dropdown-item">Wonogiri/Ngadirojo</div>
+<div class="dropdown-item">Wonogiri/Nguntoronadi</div>
+<div class="dropdown-item">Wonogiri/Paranggupito</div>
+<div class="dropdown-item">Wonogiri/Puhpelem</div>
+<div class="dropdown-item">Wonogiri/Purwantoro</div>
+<div class="dropdown-item">Wonogiri/Selogiri</div>
+<div class="dropdown-item">Wonogiri/Sidoharjo</div>
+<div class="dropdown-item">Wonogiri/Tirtomoyo</div>
+<div class="dropdown-item">Wonogiri/Wuryantoro</div>
+<div class="dropdown-item">Wonogiri/Wonogiri</div>
+
+<div class="dropdown-item">Sukoharjo/Baki</div>
+<div class="dropdown-item">Sukoharjo/Bendosari</div>
+<div class="dropdown-item">Sukoharjo/Bulu</div>
+<div class="dropdown-item">Sukoharjo/Gatak</div>
+<div class="dropdown-item">Sukoharjo/Grogol</div>
+<div class="dropdown-item">Sukoharjo/Nguter</div>
+<div class="dropdown-item">Sukoharjo/Polokarto</div>
+<div class="dropdown-item">Sukoharjo/Sukoharjo</div>
+<div class="dropdown-item">Sukoharjo/Tawangsari</div>
+<div class="dropdown-item">Sukoharjo/Weru</div>
+<div class="dropdown-item">Sukoharjo/Mojolaban</div>
+<div class="dropdown-item">Sukoharjo/Kartasura</div>
+
+<div class="dropdown-item">Boyolali/Andong</div>
+<div class="dropdown-item">Boyolali/Ampel</div>
+<div class="dropdown-item">Boyolali/Banyudono</div>
+<div class="dropdown-item">Boyolali/Boyolali</div>
+<div class="dropdown-item">Boyolali/Cepogo</div>
+<div class="dropdown-item">Boyolali/Juwangi</div>
+<div class="dropdown-item">Boyolali/Karanggede</div>
+<div class="dropdown-item">Boyolali/Kemusu</div>
+<div class="dropdown-item">Boyolali/Klego</div>
+<div class="dropdown-item">Boyolali/Mojosongo</div>
+<div class="dropdown-item">Boyolali/Musuk</div>
+<div class="dropdown-item">Boyolali/Nogosari</div>
+<div class="dropdown-item">Boyolali/Sambi</div>
+<div class="dropdown-item">Boyolali/Sawit</div>
+<div class="dropdown-item">Boyolali/Selo</div>
+<div class="dropdown-item">Boyolali/Simo</div>
+<div class="dropdown-item">Boyolali/Teras</div>
+<div class="dropdown-item">Boyolali/Tamansari</div>
+<div class="dropdown-item">Boyolali/Wonosegoro</div>
+
+<div class="dropdown-item">Klaten/Bayangkara</div>
+<div class="dropdown-item">Klaten/Bayat</div>
+<div class="dropdown-item">Klaten/Cawas</div>
+<div class="dropdown-item">Klaten/Ceper</div>
+<div class="dropdown-item">Klaten/Delanggu</div>
+<div class="dropdown-item">Klaten/Gantiwarno</div>
+<div class="dropdown-item">Klaten/Jatinom</div>
+<div class="dropdown-item">Klaten/Jogonalan</div>
+<div class="dropdown-item">Klaten/Kalikotes</div>
+<div class="dropdown-item">Klaten/Karanganom</div>
+<div class="dropdown-item">Klaten/Karangdowo</div>
+<div class="dropdown-item">Klaten/Kebonarum</div>
+<div class="dropdown-item">Klaten/Kemalang</div>
+<div class="dropdown-item">Klaten/Klaten Selatan</div>
+<div class="dropdown-item">Klaten/Klaten Tengah</div>
+<div class="dropdown-item">Klaten/Klaten Utara</div>
+<div class="dropdown-item">Klaten/Manisrenggo</div>
+<div class="dropdown-item">Klaten/Ngawen</div>
+<div class="dropdown-item">Klaten/Polanharjo</div>
+<div class="dropdown-item">Klaten/Prambanan</div>
+<div class="dropdown-item">Klaten/Tulung</div>
+<div class="dropdown-item">Klaten/Wedi</div>
+<div class="dropdown-item">Klaten/Wonosari</div>
+
+<div class="dropdown-item">Semarang/Candisari</div>
+<div class="dropdown-item">Semarang/Gajahmungkur</div>
+<div class="dropdown-item">Semarang/Gayamsari</div>
+<div class="dropdown-item">Semarang/Genuk</div>
+<div class="dropdown-item">Semarang/Gunungpati</div>
+<div class="dropdown-item">Semarang/Mijen</div>
+<div class="dropdown-item">Semarang/Ngalian</div>
+<div class="dropdown-item">Semarang/Pedurungan</div>
+<div class="dropdown-item">Semarang/Semarang Barat</div>
+<div class="dropdown-item">Semarang/Semarang Selatan</div>
+<div class="dropdown-item">Semarang/Semarang Tengah</div>
+<div class="dropdown-item">Semarang/Semarang Timur</div>
+<div class="dropdown-item">Semarang/Semarang Utara</div>
+<div class="dropdown-item">Semarang/Tembalang</div>
+<div class="dropdown-item">Semarang/Tugu</div>
+
+<div class="dropdown-item">Salatiga/Argomulyo</div>
+<div class="dropdown-item">Salatiga/Sidomukti</div>
+<div class="dropdown-item">Salatiga/Sidorejo</div>
+<div class="dropdown-item">Salatiga/Tingkir</div>
+
+<div class="dropdown-item">Surakarta/Banjarsari</div>
+<div class="dropdown-item">Surakarta/Jebres</div>
+<div class="dropdown-item">Surakarta/Laweyan</div>
+<div class="dropdown-item">Surakarta/Pasar Kliwon</div>
+<div class="dropdown-item">Surakarta/Serengan</div>
+
+<div class="dropdown-item">Pekalongan Barat</div>
+<div class="dropdown-item">Pekalongan Timur</div>
+<div class="dropdown-item">Pekalongan Utara</div>
+<div class="dropdown-item">Pekalongan Selatan</div>
+
+<div class="dropdown-item">Tegal/Margadana</div>
+<div class="dropdown-item">Tegal/Tegal Barat</div>
+<div class="dropdown-item">Tegal/Tegal Timur</div>
+<div class="dropdown-item">Tegal/Tegal Selatan</div>
+
+<div class="dropdown-item">Magelang Selatan</div>
+<div class="dropdown-item">Magelang Tengah</div>
+<div class="dropdown-item">Magelang Utara</div>
+
+
+<!-- GRESIK -->
+<div class="dropdown-item">Gresik/Balongpanggang</div>
+<div class="dropdown-item">Gresik/Benjeng</div>
+<div class="dropdown-item">Gresik/Bungah</div>
+<div class="dropdown-item">Gresik/Cerme</div>
+<div class="dropdown-item">Gresik/Driyorejo</div>
+<div class="dropdown-item">Gresik/Duduksampeyan</div>
+<div class="dropdown-item">Gresik/Dukun</div>
+<div class="dropdown-item">Gresik/Gresik</div>
+<div class="dropdown-item">Gresik/Kebomas</div>
+<div class="dropdown-item">Gresik/Kedamean</div>
+<div class="dropdown-item">Gresik/Manyar</div>
+<div class="dropdown-item">Gresik/Menganti</div>
+<div class="dropdown-item">Gresik/Panceng</div>
+<div class="dropdown-item">Gresik/Sangkapura</div>
+<div class="dropdown-item">Gresik/Sidayu</div>
+<div class="dropdown-item">Gresik/Tambak</div>
+<div class="dropdown-item">Gresik/Ujungpangkah</div>
+<div class="dropdown-item">Gresik/Wringinanom</div>
+
+<!-- KOTA SURABAYA -->
+<div class="dropdown-item">Surabaya/Asemrowo</div>
+<div class="dropdown-item">Surabaya/Benowo</div>
+<div class="dropdown-item">Surabaya/Bubutan</div>
+<div class="dropdown-item">Surabaya/Bulak</div>
+<div class="dropdown-item">Surabaya/Dukuh Pakis</div>
+<div class="dropdown-item">Surabaya/Gayungan</div>
+<div class="dropdown-item">Surabaya/Genteng</div>
+<div class="dropdown-item">Surabaya/Gubeng</div>
+<div class="dropdown-item">Surabaya/Gunung Anyar</div>
+<div class="dropdown-item">Surabaya/Jambangan</div>
+<div class="dropdown-item">Surabaya/Karangpilang</div>
+<div class="dropdown-item">Surabaya/Kenjeran</div>
+<div class="dropdown-item">Surabaya/Krembangan</div>
+<div class="dropdown-item">Surabaya/Lakarsantri</div>
+<div class="dropdown-item">Surabaya/Mulyorejo</div>
+<div class="dropdown-item">Surabaya/Pabean Cantikan</div>
+<div class="dropdown-item">Surabaya/Pakal</div>
+<div class="dropdown-item">Surabaya/Rungkut</div>
+<div class="dropdown-item">Surabaya/Sambikerep</div>
+<div class="dropdown-item">Surabaya/Sawahan</div>
+<div class="dropdown-item">Surabaya/Semampir</div>
+<div class="dropdown-item">Surabaya/Simokerto</div>
+<div class="dropdown-item">Surabaya/Sukolilo</div>
+<div class="dropdown-item">Surabaya/Sukomanunggal</div>
+<div class="dropdown-item">Surabaya/Tambaksari</div>
+<div class="dropdown-item">Surabaya/Tandes</div>
+<div class="dropdown-item">Surabaya/Tegalsari</div>
+<div class="dropdown-item">Surabaya/Tenggilis Mejoyo</div>
+<div class="dropdown-item">Surabaya/Wiyung</div>
+<div class="dropdown-item">Surabaya/Wonocolo</div>
+<div class="dropdown-item">Surabaya/Wonokromo</div>
+
+<!-- SIDOARJO -->
+<div class="dropdown-item">Sidoarjo/Balongbendo</div>
+<div class="dropdown-item">Sidoarjo/Buduran</div>
+<div class="dropdown-item">Sidoarjo/Candi</div>
+<div class="dropdown-item">Sidoarjo/Gedangan</div>
+<div class="dropdown-item">Sidoarjo/Jabon</div>
+<div class="dropdown-item">Sidoarjo/Krembung</div>
+<div class="dropdown-item">Sidoarjo/Krian</div>
+<div class="dropdown-item">Sidoarjo/Porong</div>
+<div class="dropdown-item">Sidoarjo/Prambon</div>
+<div class="dropdown-item">Sidoarjo/Sedati</div>
+<div class="dropdown-item">Sidoarjo/Sidoarjo</div>
+<div class="dropdown-item">Sidoarjo/Sukodono</div>
+<div class="dropdown-item">Sidoarjo/Taman</div>
+<div class="dropdown-item">Sidoarjo/Tanggulangin</div>
+<div class="dropdown-item">Sidoarjo/Tarik</div>
+<div class="dropdown-item">Sidoarjo/Tulangan</div>
+<div class="dropdown-item">Sidoarjo/Waru</div>
+<div class="dropdown-item">Sidoarjo/Wonoayu</div>
+
+<!-- LAMONGAN -->
+<div class="dropdown-item">Lamongan/Babat</div>
+<div class="dropdown-item">Lamongan/Bluluk</div>
+<div class="dropdown-item">Lamongan/Brondong</div>
+<div class="dropdown-item">Lamongan/Deket</div>
+<div class="dropdown-item">Lamongan/Glagah</div>
+<div class="dropdown-item">Lamongan/Karangbinangun</div>
+<div class="dropdown-item">Lamongan/Karanggeneng</div>
+<div class="dropdown-item">Lamongan/Kembangbahu</div>
+<div class="dropdown-item">Lamongan/Lamongan</div>
+<div class="dropdown-item">Lamongan/Maduran</div>
+<div class="dropdown-item">Lamongan/Mantup</div>
+<div class="dropdown-item">Lamongan/Modo</div>
+<div class="dropdown-item">Lamongan/Ngimbang</div>
+<div class="dropdown-item">Lamongan/Paciran</div>
+<div class="dropdown-item">Lamongan/Pucuk</div>
+<div class="dropdown-item">Lamongan/Sambeng</div>
+<div class="dropdown-item">Lamongan/Sekaran</div>
+<div class="dropdown-item">Lamongan/Solokuro</div>
+<div class="dropdown-item">Lamongan/Sugio</div>
+<div class="dropdown-item">Lamongan/Sukodadi</div>
+<div class="dropdown-item">Lamongan/Sukorame</div>
+<div class="dropdown-item">Lamongan/Tikung</div>
+<div class="dropdown-item">Lamongan/Turi</div>
+
+<!-- KAB. MOJOKERTO -->
+<div class="dropdown-item">Mojokerto/Bangsal</div>
+<div class="dropdown-item">Mojokerto/Dawarblandong</div>
+<div class="dropdown-item">Mojokerto/Dlanggu</div>
+<div class="dropdown-item">Mojokerto/Gedeg</div>
+<div class="dropdown-item">Mojokerto/Gondang</div>
+<div class="dropdown-item">Mojokerto/Jatirejo</div>
+<div class="dropdown-item">Mojokerto/Jetis</div>
+<div class="dropdown-item">Mojokerto/Kemlagi</div>
+<div class="dropdown-item">Mojokerto/Kutorejo</div>
+<div class="dropdown-item">Mojokerto/Mojoanyar</div>
+<div class="dropdown-item">Mojokerto/Mojosari</div>
+<div class="dropdown-item">Mojokerto/Ngoro</div>
+<div class="dropdown-item">Mojokerto/Pungging</div>
+<div class="dropdown-item">Mojokerto/Sooko</div>
+<div class="dropdown-item">Mojokerto/Trawas</div>
+<div class="dropdown-item">Mojokerto/Trowulan</div>
+
+<!-- KOTA MOJOKERTO -->
+<div class="dropdown-item">Kota Mojokerto/Magersari</div>
+<div class="dropdown-item">Kota Mojokerto/Prajurit Kulon</div>
+
+<!-- JOMBANG -->
+<div class="dropdown-item">Jombang/Bandar Kedungmulyo</div>
+<div class="dropdown-item">Jombang/Bareng</div>
+<div class="dropdown-item">Jombang/Diwek</div>
+<div class="dropdown-item">Jombang/Gudo</div>
+<div class="dropdown-item">Jombang/Jogoroto</div>
+<div class="dropdown-item">Jombang/Kabuh</div>
+<div class="dropdown-item">Jombang/Kesamben</div>
+<div class="dropdown-item">Jombang/Kudu</div>
+<div class="dropdown-item">Jombang/Megaluh</div>
+<div class="dropdown-item">Jombang/Mojoagung</div>
+<div class="dropdown-item">Jombang/Mojowarno</div>
+<div class="dropdown-item">Jombang/Ngoro</div>
+<div class="dropdown-item">Jombang/Ngusikan</div>
+<div class="dropdown-item">Jombang/Perak</div>
+<div class="dropdown-item">Jombang/Peterongan</div>
+<div class="dropdown-item">Jombang/Ploso</div>
+<div class="dropdown-item">Jombang/Sumobito</div>
+<div class="dropdown-item">Jombang/Tembelang</div>
+<div class="dropdown-item">Jombang/Wonosalam</div>
+<div class="dropdown-item">Jombang/Jombang</div>
+
+<!-- KAB. MALANG -->
+<div class="dropdown-item">Malang/Ampelgading</div>
+<div class="dropdown-item">Malang/Bantur</div>
+<div class="dropdown-item">Malang/Bululawang</div>
+<div class="dropdown-item">Malang/Dampit</div>
+<div class="dropdown-item">Malang/Dau</div>
+<div class="dropdown-item">Malang/Donomulyo</div>
+<div class="dropdown-item">Malang/Gedangan</div>
+<div class="dropdown-item">Malang/Gondanglegi</div>
+<div class="dropdown-item">Malang/Jabung</div>
+<div class="dropdown-item">Malang/Kalipare</div>
+<div class="dropdown-item">Malang/Kasembon</div>
+<div class="dropdown-item">Malang/Kepanjen</div>
+<div class="dropdown-item">Malang/Kromengan</div>
+<div class="dropdown-item">Malang/Lawang</div>
+<div class="dropdown-item">Malang/Ngajum</div>
+<div class="dropdown-item">Malang/Ngantang</div>
+<div class="dropdown-item">Malang/Pagelaran</div>
+<div class="dropdown-item">Malang/Pakis</div>
+<div class="dropdown-item">Malang/Pakisaji</div>
+<div class="dropdown-item">Malang/Poncokusumo</div>
+<div class="dropdown-item">Malang/Pujon</div>
+<div class="dropdown-item">Malang/Singosari</div>
+<div class="dropdown-item">Malang/Sumbermanjing Wetan</div>
+<div class="dropdown-item">Malang/Sumberpucung</div>
+<div class="dropdown-item">Malang/Tajinan</div>
+<div class="dropdown-item">Malang/Tirtoyudo</div>
+<div class="dropdown-item">Malang/Tumpang</div>
+<div class="dropdown-item">Malang/Turen</div>
+<div class="dropdown-item">Malang/Wagir</div>
+<div class="dropdown-item">Malang/Wajak</div>
+<div class="dropdown-item">Malang/Wonosari</div>
+
+<!-- KOTA MALANG -->
+<div class="dropdown-item">Kota Malang/Blimbing</div>
+<div class="dropdown-item">Kota Malang/Kedungkandang</div>
+<div class="dropdown-item">Kota Malang/Klojen</div>
+<div class="dropdown-item">Kota Malang/Lowokwaru</div>
+<div class="dropdown-item">Kota Malang/Sukun</div>
+
+<!-- KOTA BATU -->
+<div class="dropdown-item">Kota Batu/Batu</div>
+<div class="dropdown-item">Kota Batu/Bumiaji</div>
+<div class="dropdown-item">Kota Batu/Junrejo</div>
+
+<!-- KAB. PASURUAN -->
+<div class="dropdown-item">Pasuruan/Beji</div>
+<div class="dropdown-item">Pasuruan/Bangil</div>
+<div class="dropdown-item">Pasuruan/Gempol</div>
+<div class="dropdown-item">Pasuruan/Grati</div>
+<div class="dropdown-item">Pasuruan/Gondangwetan</div>
+<div class="dropdown-item">Pasuruan/Kejayan</div>
+<div class="dropdown-item">Pasuruan/Lekok</div>
+<div class="dropdown-item">Pasuruan/Lumbang</div>
+<div class="dropdown-item">Pasuruan/Nguling</div>
+<div class="dropdown-item">Pasuruan/Pandaan</div>
+<div class="dropdown-item">Pasuruan/Pasrepan</div>
+<div class="dropdown-item">Pasuruan/Pohjentrek</div>
+<div class="dropdown-item">Pasuruan/Purwodadi</div>
+<div class="dropdown-item">Pasuruan/Puspo</div>
+<div class="dropdown-item">Pasuruan/Rejoso</div>
+<div class="dropdown-item">Pasuruan/Sukorejo</div>
+<div class="dropdown-item">Pasuruan/Tosari</div>
+<div class="dropdown-item">Pasuruan/Tutur</div>
+<div class="dropdown-item">Pasuruan/Wonorejo</div>
+
+<!-- KOTA PASURUAN -->
+<div class="dropdown-item">Kota Pasuruan/Bugul Kidul</div>
+<div class="dropdown-item">Kota Pasuruan/Gadingrejo</div>
+<div class="dropdown-item">Kota Pasuruan/Panggungrejo</div>
+<div class="dropdown-item">Kota Pasuruan/Purworejo</div>
+
+<!-- KAB. PROBOLINGGO -->
+<div class="dropdown-item">Probolinggo/Bantaran</div>
+<div class="dropdown-item">Probolinggo/Banyuanyar</div>
+<div class="dropdown-item">Probolinggo/Besuk</div>
+<div class="dropdown-item">Probolinggo/Dringu</div>
+<div class="dropdown-item">Probolinggo/Gading</div>
+<div class="dropdown-item">Probolinggo/Gending</div>
+<div class="dropdown-item">Probolinggo/Krejengan</div>
+<div class="dropdown-item">Probolinggo/Krucil</div>
+<div class="dropdown-item">Probolinggo/Kuripan</div>
+<div class="dropdown-item">Probolinggo/Leces</div>
+<div class="dropdown-item">Probolinggo/Lumbang</div>
+<div class="dropdown-item">Probolinggo/Maron</div>
+<div class="dropdown-item">Probolinggo/Paiton</div>
+<div class="dropdown-item">Probolinggo/Pajarakan</div>
+<div class="dropdown-item">Probolinggo/Pakuniran</div>
+<div class="dropdown-item">Probolinggo/Sumber</div>
+<div class="dropdown-item">Probolinggo/Sumberasih</div>
+<div class="dropdown-item">Probolinggo/Tegal Siwalan</div>
+<div class="dropdown-item">Probolinggo/Tiris</div>
+<div class="dropdown-item">Probolinggo/Tongas</div>
+<div class="dropdown-item">Probolinggo/Wonomerto</div>
+
+<!-- KOTA PROBOLINGGO -->
+<div class="dropdown-item">Kota Probolinggo/Kademangan</div>
+<div class="dropdown-item">Kota Probolinggo/Kanigaran</div>
+<div class="dropdown-item">Kota Probolinggo/Kedopok</div>
+<div class="dropdown-item">Kota Probolinggo/Mayangan</div>
+<div class="dropdown-item">Kota Probolinggo/Wonoasih</div>
+
+<!-- LUMAJANG -->
+<div class="dropdown-item">Lumajang/Candipuro</div>
+<div class="dropdown-item">Lumajang/Gucialit</div>
+<div class="dropdown-item">Lumajang/Jatiroto</div>
+<div class="dropdown-item">Lumajang/Kedungjajang</div>
+<div class="dropdown-item">Lumajang/Klakah</div>
+<div class="dropdown-item">Lumajang/Kunir</div>
+<div class="dropdown-item">Lumajang/Lumajang</div>
+<div class="dropdown-item">Lumajang/Pasirian</div>
+<div class="dropdown-item">Lumajang/Pronojiwo</div>
+<div class="dropdown-item">Lumajang/Randuagung</div>
+<div class="dropdown-item">Lumajang/Ranuyoso</div>
+<div class="dropdown-item">Lumajang/Rowokangkung</div>
+<div class="dropdown-item">Lumajang/Senduro</div>
+<div class="dropdown-item">Lumajang/Sukodono</div>
+<div class="dropdown-item">Lumajang/Sumbersuko</div>
+<div class="dropdown-item">Lumajang/Tekung</div>
+<div class="dropdown-item">Lumajang/Tempeh</div>
+<div class="dropdown-item">Lumajang/Yosowilangun</div>
+
+<!-- JEMBER -->
+<div class="dropdown-item">Jember/Ajung</div>
+<div class="dropdown-item">Jember/Ambulu</div>
+<div class="dropdown-item">Jember/Arjasa</div>
+<div class="dropdown-item">Jember/Balung</div>
+<div class="dropdown-item">Jember/Bangsalsari</div>
+<div class="dropdown-item">Jember/Gumukmas</div>
+<div class="dropdown-item">Jember/Jelbuk</div>
+<div class="dropdown-item">Jember/Jenggawah</div>
+<div class="dropdown-item">Jember/Jombang</div>
+<div class="dropdown-item">Jember/Kalisat</div>
+<div class="dropdown-item">Jember/Kaliwates</div>
+<div class="dropdown-item">Jember/Kencong</div>
+<div class="dropdown-item">Jember/Ledokombo</div>
+<div class="dropdown-item">Jember/Mayang</div>
+<div class="dropdown-item">Jember/Mumbulsari</div>
+<div class="dropdown-item">Jember/Pakusari</div>
+<div class="dropdown-item">Jember/Panti</div>
+<div class="dropdown-item">Jember/Puger</div>
+<div class="dropdown-item">Jember/Rambipuji</div>
+<div class="dropdown-item">Jember/Semboro</div>
+<div class="dropdown-item">Jember/Silo</div>
+<div class="dropdown-item">Jember/Sukorambi</div>
+<div class="dropdown-item">Jember/Sukowono</div>
+<div class="dropdown-item">Jember/Sumberbaru</div>
+<div class="dropdown-item">Jember/Sumberjambe</div>
+<div class="dropdown-item">Jember/Sumbersari</div>
+<div class="dropdown-item">Jember/Tanggul</div>
+<div class="dropdown-item">Jember/Tempurejo</div>
+<div class="dropdown-item">Jember/Umbulsari</div>
+<div class="dropdown-item">Jember/Wuluhan</div>
+
+<!-- BONDOWOSO -->
+<div class="dropdown-item">Bondowoso/Binakal</div>
+<div class="dropdown-item">Bondowoso/Botolinggo</div>
+<div class="dropdown-item">Bondowoso/Cermee</div>
+<div class="dropdown-item">Bondowoso/Curahdami</div>
+<div class="dropdown-item">Bondowoso/Grujugan</div>
+<div class="dropdown-item">Bondowoso/Jambesari Darus Sholah</div>
+<div class="dropdown-item">Bondowoso/Klabang</div>
+<div class="dropdown-item">Bondowoso/Maesan</div>
+<div class="dropdown-item">Bondowoso/Prajekan</div>
+<div class="dropdown-item">Bondowoso/Pujer</div>
+<div class="dropdown-item">Bondowoso/Sempol</div>
+<div class="dropdown-item">Bondowoso/Sukosari</div>
+<div class="dropdown-item">Bondowoso/Taman Krocok</div>
+<div class="dropdown-item">Bondowoso/Tamanan</div>
+<div class="dropdown-item">Bondowoso/Tapen</div>
+<div class="dropdown-item">Bondowoso/Tegalampel</div>
+<div class="dropdown-item">Bondowoso/Tenggarang</div>
+<div class="dropdown-item">Bondowoso/Wonosari</div>
+<div class="dropdown-item">Bondowoso/Wringin</div>
+
+<!-- SITUBONDO -->
+<div class="dropdown-item">Situbondo/Arjasa</div>
+<div class="dropdown-item">Situbondo/Asembagus</div>
+<div class="dropdown-item">Situbondo/Banyuglugur</div>
+<div class="dropdown-item">Situbondo/Banyuputih</div>
+<div class="dropdown-item">Situbondo/Besuki</div>
+<div class="dropdown-item">Situbondo/Bungatan</div>
+<div class="dropdown-item">Situbondo/Jangkar</div>
+<div class="dropdown-item">Situbondo/Jatibanteng</div>
+<div class="dropdown-item">Situbondo/Kapongan</div>
+<div class="dropdown-item">Situbondo/Kendit</div>
+<div class="dropdown-item">Situbondo/Mangaran</div>
+<div class="dropdown-item">Situbondo/Mlandingan</div>
+<div class="dropdown-item">Situbondo/Panarukan</div>
+<div class="dropdown-item">Situbondo/Panji</div>
+<div class="dropdown-item">Situbondo/Suboh</div>
+
+<!-- BANYUWANGI -->
+<div class="dropdown-item">Banyuwangi/Bangorejo</div>
+<div class="dropdown-item">Banyuwangi/Banyuwangi</div>
+<div class="dropdown-item">Banyuwangi/Cluring</div>
+<div class="dropdown-item">Banyuwangi/Gambiran</div>
+<div class="dropdown-item">Banyuwangi/Genteng</div>
+<div class="dropdown-item">Banyuwangi/Giri</div>
+<div class="dropdown-item">Banyuwangi/Glagah</div>
+<div class="dropdown-item">Banyuwangi/Glenmore</div>
+<div class="dropdown-item">Banyuwangi/Kalibaru</div>
+<div class="dropdown-item">Banyuwangi/Kalipuro</div>
+<div class="dropdown-item">Banyuwangi/Kabat</div>
+<div class="dropdown-item">Banyuwangi/Muncar</div>
+<div class="dropdown-item">Banyuwangi/Pesanggaran</div>
+<div class="dropdown-item">Banyuwangi/Purwoharjo</div>
+<div class="dropdown-item">Banyuwangi/Rogojampi</div>
+<div class="dropdown-item">Banyuwangi/Srono</div>
+<div class="dropdown-item">Banyuwangi/Siliragung</div>
+<div class="dropdown-item">Banyuwangi/Songgon</div>
+<div class="dropdown-item">Banyuwangi/Tegaldlimo</div>
+<div class="dropdown-item">Banyuwangi/Tegalsari</div>
+<div class="dropdown-item">Banyuwangi/Wongsorejo</div>
+
+<!-- KAB. KEDIRI -->
+<div class="dropdown-item">Kediri/Badas</div>
+<div class="dropdown-item">Kediri/Banyakan</div>
+<div class="dropdown-item">Kediri/Gampengrejo</div>
+<div class="dropdown-item">Kediri/Grogol</div>
+<div class="dropdown-item">Kediri/Gurah</div>
+<div class="dropdown-item">Kediri/Kandangan</div>
+<div class="dropdown-item">Kediri/Kandat</div>
+<div class="dropdown-item">Kediri/Kayen Kidul</div>
+<div class="dropdown-item">Kediri/Kepung</div>
+<div class="dropdown-item">Kediri/Kras</div>
+<div class="dropdown-item">Kediri/Kunjang</div>
+<div class="dropdown-item">Kediri/Mojo</div>
+<div class="dropdown-item">Kediri/Ngadiluwih</div>
+<div class="dropdown-item">Kediri/Papar</div>
+<div class="dropdown-item">Kediri/Pare</div>
+<div class="dropdown-item">Kediri/Pagu</div>
+<div class="dropdown-item">Kediri/Puncu</div>
+<div class="dropdown-item">Kediri/Purwoasri</div>
+<div class="dropdown-item">Kediri/Plosoklaten</div>
+<div class="dropdown-item">Kediri/Ringinrejo</div>
+<div class="dropdown-item">Kediri/Semen</div>
+<div class="dropdown-item">Kediri/Tarokan</div>
+<div class="dropdown-item">Kediri/Wates</div>
+
+<!-- KOTA KEDIRI -->
+<div class="dropdown-item">Kota Kediri/Kediri Barat</div>
+<div class="dropdown-item">Kota Kediri/Kediri Timur</div>
+<div class="dropdown-item">Kota Kediri/Mojoroto</div>
+
+<!-- KAB. BLITAR -->
+<div class="dropdown-item">Blitar/Bakung</div>
+<div class="dropdown-item">Blitar/Binangun</div>
+<div class="dropdown-item">Blitar/Doko</div>
+<div class="dropdown-item">Blitar/Gandusari</div>
+<div class="dropdown-item">Blitar/Garum</div>
+<div class="dropdown-item">Blitar/Kademangan</div>
+<div class="dropdown-item">Blitar/Kesamben</div>
+<div class="dropdown-item">Blitar/Panggungrejo</div>
+<div class="dropdown-item">Blitar/Ponggok</div>
+<div class="dropdown-item">Blitar/Sanan Kulon</div>
+<div class="dropdown-item">Blitar/Selopuro</div>
+<div class="dropdown-item">Blitar/Selorejo</div>
+<div class="dropdown-item">Blitar/Srengat</div>
+<div class="dropdown-item">Blitar/Sutojayan</div>
+<div class="dropdown-item">Blitar/Talun</div>
+<div class="dropdown-item">Blitar/Udanawu</div>
+<div class="dropdown-item">Blitar/Wates</div>
+<div class="dropdown-item">Blitar/Wlingi</div>
+
+<!-- KOTA BLITAR -->
+<div class="dropdown-item">Kota Blitar/Kepanjenkidul</div>
+<div class="dropdown-item">Kota Blitar/Sananwetan</div>
+<div class="dropdown-item">Kota Blitar/Sukorejo</div>
+
+<!-- TULUNGAGUNG -->
+<div class="dropdown-item">Tulungagung/Bandung</div>
+<div class="dropdown-item">Tulungagung/Besuki</div>
+<div class="dropdown-item">Tulungagung/Boyolangu</div>
+<div class="dropdown-item">Tulungagung/Sendang</div>
+<div class="dropdown-item">Tulungagung/Kauman</div>
+<div class="dropdown-item">Tulungagung/Kedungwaru</div>
+<div class="dropdown-item">Tulungagung/Ngantru</div>
+<div class="dropdown-item">Tulungagung/Ngunut</div>
+<div class="dropdown-item">Tulungagung/Pagerwojo</div>
+<div class="dropdown-item">Tulungagung/Pakel</div>
+<div class="dropdown-item">Tulungagung/Pucanglaban</div>
+<div class="dropdown-item">Tulungagung/Rejotangan</div>
+<div class="dropdown-item">Tulungagung/Sumbergempol</div>
+<div class="dropdown-item">Tulungagung/Tanggunggunung</div>
+<div class="dropdown-item">Tulungagung/Karangrejo</div>
+<div class="dropdown-item">Tulungagung/Campurdarat</div>
+
+<!-- TRENGGALEK -->
+<div class="dropdown-item">Trenggalek/Bendungan</div>
+<div class="dropdown-item">Trenggalek/Dongko</div>
+<div class="dropdown-item">Trenggalek/Durenan</div>
+<div class="dropdown-item">Trenggalek/Gandusari</div>
+<div class="dropdown-item">Trenggalek/Kampak</div>
+<div class="dropdown-item">Trenggalek/Karangan</div>
+<div class="dropdown-item">Trenggalek/Munjungan</div>
+<div class="dropdown-item">Trenggalek/Panggul</div>
+<div class="dropdown-item">Trenggalek/Pogalan</div>
+<div class="dropdown-item">Trenggalek/Pule</div>
+<div class="dropdown-item">Trenggalek/Suruh</div>
+<div class="dropdown-item">Trenggalek/Tugu</div>
+<div class="dropdown-item">Trenggalek/Watulimo</div>
+
+<!-- NGANJUK -->
+<div class="dropdown-item">Nganjuk/Bagor</div>
+<div class="dropdown-item">Nganjuk/Baron</div>
+<div class="dropdown-item">Nganjuk/Berbek</div>
+<div class="dropdown-item">Nganjuk/Gondang</div>
+<div class="dropdown-item">Nganjuk/Jatikalen</div>
+<div class="dropdown-item">Nganjuk/Kertosono</div>
+<div class="dropdown-item">Nganjuk/Lengkong</div>
+<div class="dropdown-item">Nganjuk/Loceret</div>
+<div class="dropdown-item">Nganjuk/Nganjuk</div>
+<div class="dropdown-item">Nganjuk/Ngetos</div>
+<div class="dropdown-item">Nganjuk/Ngluyu</div>
+<div class="dropdown-item">Nganjuk/Ngronggot</div>
+<div class="dropdown-item">Nganjuk/Patianrowo</div>
+<div class="dropdown-item">Nganjuk/Pace</div>
+<div class="dropdown-item">Nganjuk/Rejoso</div>
+<div class="dropdown-item">Nganjuk/Sawahan</div>
+<div class="dropdown-item">Nganjuk/Sukomoro</div>
+<div class="dropdown-item">Nganjuk/Tanjunganom</div>
+<div class="dropdown-item">Nganjuk/Wilangan</div>
+<div class="dropdown-item">Nganjuk/Prambon</div>
+
+<!-- MADIUN -->
+<div class="dropdown-item">Madiun/Balerejo</div>
+<div class="dropdown-item">Madiun/Dagangan</div>
+<div class="dropdown-item">Madiun/Dolopo</div>
+<div class="dropdown-item">Madiun/Geger</div>
+<div class="dropdown-item">Madiun/Gemarang</div>
+<div class="dropdown-item">Madiun/Jiwan</div>
+<div class="dropdown-item">Madiun/Kare</div>
+<div class="dropdown-item">Madiun/Mejayan</div>
+<div class="dropdown-item">Madiun/Pilangkenceng</div>
+<div class="dropdown-item">Madiun/Saradan</div>
+<div class="dropdown-item">Madiun/Sawahan</div>
+<div class="dropdown-item">Madiun/Wonoasri</div>
+<div class="dropdown-item">Madiun/Wungu</div>
+
+<!-- KOTA MADIUN -->
+<div class="dropdown-item">Kota Madiun/Kartoharjo</div>
+<div class="dropdown-item">Kota Madiun/Manguharjo</div>
+<div class="dropdown-item">Kota Madiun/Taman</div>
+
+<!-- MAGETAN -->
+<div class="dropdown-item">Magetan/Bendo</div>
+<div class="dropdown-item">Magetan/Karangrejo</div>
+<div class="dropdown-item">Magetan/Kawedanan</div>
+<div class="dropdown-item">Magetan/Lembeyan</div>
+<div class="dropdown-item">Magetan/Magetan</div>
+<div class="dropdown-item">Magetan/Maospati</div>
+<div class="dropdown-item">Magetan/Barat</div>
+<div class="dropdown-item">Magetan/Parang</div>
+<div class="dropdown-item">Magetan/Plaosan</div>
+<div class="dropdown-item">Magetan/Panekan</div>
+<div class="dropdown-item">Magetan/Poncol</div>
+<div class="dropdown-item">Magetan/Sukomoro</div>
+<div class="dropdown-item">Magetan/Takeran</div>
+
+<!-- NGAWI -->
+<div class="dropdown-item">Ngawi/Bringin</div>
+<div class="dropdown-item">Ngawi/Geneng</div>
+<div class="dropdown-item">Ngawi/Gerih</div>
+<div class="dropdown-item">Ngawi/Jogorogo</div>
+<div class="dropdown-item">Ngawi/Karanganyar</div>
+<div class="dropdown-item">Ngawi/Karangjati</div>
+<div class="dropdown-item">Ngawi/Kedunggalar</div>
+<div class="dropdown-item">Ngawi/Kendal</div>
+<div class="dropdown-item">Ngawi/Kwadungan</div>
+<div class="dropdown-item">Ngawi/Mantingan</div>
+<div class="dropdown-item">Ngawi/Ngawi</div>
+<div class="dropdown-item">Ngawi/Ngrambe</div>
+<div class="dropdown-item">Ngawi/Padas</div>
+<div class="dropdown-item">Ngawi/Pangkur</div>
+<div class="dropdown-item">Ngawi/Paron</div>
+<div class="dropdown-item">Ngawi/Pitu</div>
+<div class="dropdown-item">Ngawi/Sine</div>
+<div class="dropdown-item">Ngawi/Widodaren</div>
+
+<!-- PONOROGO -->
+<div class="dropdown-item">Ponorogo/Babadan</div>
+<div class="dropdown-item">Ponorogo/Badegan</div>
+<div class="dropdown-item">Ponorogo/Balong</div>
+<div class="dropdown-item">Ponorogo/Bungkal</div>
+<div class="dropdown-item">Ponorogo/Jambon</div>
+<div class="dropdown-item">Ponorogo/Jenangan</div>
+<div class="dropdown-item">Ponorogo/Jetis</div>
+<div class="dropdown-item">Ponorogo/Kauman</div>
+<div class="dropdown-item">Ponorogo/Mlarak</div>
+<div class="dropdown-item">Ponorogo/Ngebel</div>
+<div class="dropdown-item">Ponorogo/Ngrayun</div>
+<div class="dropdown-item">Ponorogo/Ponorogo</div>
+<div class="dropdown-item">Ponorogo/Pulung</div>
+<div class="dropdown-item">Ponorogo/Sambit</div>
+<div class="dropdown-item">Ponorogo/Sampung</div>
+<div class="dropdown-item">Ponorogo/Sawoo</div>
+<div class="dropdown-item">Ponorogo/Siman</div>
+<div class="dropdown-item">Ponorogo/Slahung</div>
+<div class="dropdown-item">Ponorogo/Sooko</div>
+<div class="dropdown-item">Ponorogo/Sukorejo</div>
+
+<!-- PACITAN -->
+<div class="dropdown-item">Pacitan/Arjosari</div>
+<div class="dropdown-item">Pacitan/Bandar</div>
+<div class="dropdown-item">Pacitan/Donorojo</div>
+<div class="dropdown-item">Pacitan/Kebonagung</div>
+<div class="dropdown-item">Pacitan/Nawangan</div>
+<div class="dropdown-item">Pacitan/Ngadirojo</div>
+<div class="dropdown-item">Pacitan/Pringkuku</div>
+<div class="dropdown-item">Pacitan/Punung</div>
+<div class="dropdown-item">Pacitan/Sudimoro</div>
+<div class="dropdown-item">Pacitan/Tegalombo</div>
+<div class="dropdown-item">Pacitan/Tulakan</div>
+<div class="dropdown-item">Pacitan/Pacitan</div>
+
+        <!-- Tambahkan semua kabupaten/kota lain di sini sesuai list kamu -->
+        <!-- ==== /DAFTAR ==== -->
+      </div>
+    </div>
+
+    <p id="peringatanKurir" style="color:red; display:none;"></p>
+    <p class="peringatan-kabupaten">Pastikan kabupaten yang Anda pilih sesuai dengan alamat pengiriman di atas</p>
+    <p>Ongkos kirim: <span id="ongkir" class="harga">Rp0</span></p>
+  </div>
+
+  <!-- Detail Pesanan -->
+  <div class="detail-pesanan-container">
+    <h4 class="judul-pesanan">Detail Pesanan</h4>
+    <div class="detail-produk">
+      <div class="detail-teks">
+        <strong>Memuat data pesanan...</strong>
+      </div>
+    </div>
+    <div class="tombol-lanjutkan-container">
+      <button class="tombol-lanjutkan">Lanjut Ke Pembayaran</button>
+    </div>
+  </div>
+
+  <!-- Popup Validasi -->
+  <div id="popupValidasi" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h4>Lengkapi Data Dulu</h4>
+      <p id="popupMessage">Ada kolom yang belum diisi.</p>
+      <button id="popupOkBtn" class="btn-ok">OK</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jawara Cristal. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+
+
+<!-- ====== SCRIPT: KODE PESANAN ====== -->
+<script>
+function buatKodePesanan() {
+  const t = new Date();
+  const yyyy = t.getFullYear();
+  const mm = String(t.getMonth() + 1).padStart(2, '0');
+  const dd = String(t.getDate()).padStart(2, '0');
+  const huruf = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const rh = huruf[Math.floor(Math.random()*huruf.length)]
+           + huruf[Math.floor(Math.random()*huruf.length)];
+  const ra = Math.floor(Math.random()*10);
+  return `#JWR${yyyy}${mm}${dd}${rh}${ra}`;
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const span = document.querySelector('h3 > span.red');
+  if (span) span.textContent = buatKodePesanan();
+});
+</script>
+
+<!-- ====== SCRIPT: DROPDOWN KABUPATEN CUSTOM ====== -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const inputKab = document.getElementById('cariKabupaten');
+  const listKab  = document.getElementById('daftarKabupaten');
+  if (!inputKab || !listKab) return;
+
+  listKab.style.display = 'none';
+
+  inputKab.addEventListener('click', (e) => {
+    e.stopPropagation();
+    listKab.style.display = (listKab.style.display === 'none') ? 'block' : 'none';
+  });
+
+  listKab.addEventListener('click', (e) => {
+    const item = e.target.closest('.dropdown-item');
+    if (!item) return;
+    inputKab.value = item.textContent.trim(); // contoh: "SIDOARJO/TAMAN"
+    listKab.style.display = 'none';
+    if (typeof hitungOngkir === 'function') hitungOngkir();
+  });
+
+  document.addEventListener('click', () => listKab.style.display = 'none');
+});
+</script>
+
+<!-- ====== SCRIPT: DATA TARIF PROVINSI ====== -->
+<script>
+// Tarif berdasar PROVINSI:
+const provRates = {
+  JABAR:     { flat1_3: 99000, perJerigen: 35000 },
+  JATENG:    { flat1_3: 88000, perJerigen: 30000 },
+  JATIM:     { flat1_3: 66000, perJerigen: 17500 },
+  DKI:       { flat1_3: 99000, perJerigen: 17500 },
+  TANGERANG: { flat1_3: 99000, perJerigen: 17500 },
+  BANTEN:    { flat1_3: 99000, perJerigen: 17500 }
+
+
+};
+
+// Mapping KABUPATEN/KOTA → PROVINSI (UPPERCASE KEY)
+const kabToProv = {
+  // JATIM
+  "PACITAN": "JATIM",
+"PONOROGO": "JATIM",
+"TRENGGALEK": "JATIM",
+"TULUNGAGUNG": "JATIM",
+"BLITAR": "JATIM",
+"KEDIRI": "JATIM",
+"MALANG": "JATIM",
+"LUMAJANG": "JATIM",
+"JEMBER": "JATIM",
+"BANYUWANGI": "JATIM",
+"BONDOWOSO": "JATIM",
+"SITUBONDO": "JATIM",
+"PROBOLINGGO": "JATIM",
+"PASURUAN": "JATIM",
+"SIDOARJO": "JATIM",
+"MOJOKERTO": "JATIM",
+"JOMBANG": "JATIM",
+"NGANJUK": "JATIM",
+"MADIUN": "JATIM",
+"MAGETAN": "JATIM",
+"NGAWI": "JATIM",
+"BOJONEGORO": "JATIM",
+"TUBAN": "JATIM",
+"LAMONGAN": "JATIM",
+"GRESIK": "JATIM",
+"BANGKALAN": "JATIM",
+"SAMPANG": "JATIM",
+"PAMEKASAN": "JATIM",
+"SUMENEP": "JATIM",
+"KOTA SURABAYA": "JATIM",
+"KOTA MALANG": "JATIM",
+"KOTA BATU": "JATIM",
+"KOTA KEDIRI": "JATIM",
+"KOTA BLITAR": "JATIM",
+"KOTA MADIUN": "JATIM",
+"KOTA MOJOKERTO": "JATIM",
+"KOTA PASURUAN": "JATIM",
+"KOTA PROBOLINGGO": "JATIM",
+
+  // JATENG
+  "BANJARNEGARA": "JATENG",
+"BANYUMAS": "JATENG",
+"BATANG": "JATENG",
+"BLORA": "JATENG",
+"BOYOLALI": "JATENG",
+"BREBES": "JATENG",
+"CILACAP": "JATENG",
+"DEMAK": "JATENG",
+"GROBOGAN": "JATENG",
+"JEPARA": "JATENG",
+"KARANGANYAR": "JATENG",
+"KEBUMEN": "JATENG",
+"KENDAL": "JATENG",
+"KLATEN": "JATENG",
+"KUDUS": "JATENG",
+"MAGELANG": "JATENG",
+"PATI": "JATENG",
+"PEKALONGAN": "JATENG",
+"PEMALANG": "JATENG",
+"PURBALINGGA": "JATENG",
+"PURWOREJO": "JATENG",
+"REMBANG": "JATENG",
+"SEMARANG": "JATENG",
+"SUKOHARJO": "JATENG",
+"SRAGEN": "JATENG",
+"TEMANGGUNG": "JATENG",
+"WONOGIRI": "JATENG",
+"WONOSOBO": "JATENG",
+"TEGAL": "JATENG",            // Kabupaten Tegal
+
+"KOTA MAGELANG": "JATENG",
+"KOTA PEKALONGAN": "JATENG",
+"KOTA SALATIGA": "JATENG",
+"KOTA SEMARANG": "JATENG",
+"KOTA SURAKARTA": "JATENG",   // Solo
+"KOTA TEGAL": "JATENG",
+  
+
+  // JABAR
+  
+"BOGOR": "JABAR",
+"SUKABUMI": "JABAR",
+"CIANJUR": "JABAR",
+"BANDUNG": "JABAR",
+"GARUT": "JABAR",
+"TASIKMALAYA": "JABAR",
+"CIAMIS": "JABAR",
+"KUNINGAN": "JABAR",
+"CIREBON": "JABAR",
+"MAJALENGKA": "JABAR",
+"SUMEDANG": "JABAR",
+"INDRAMAYU": "JABAR",
+"SUBANG": "JABAR",
+"PURWAKARTA": "JABAR",
+"KARAWANG": "JABAR",
+"BEKASI": "JABAR",
+"BANDUNG BARAT": "JABAR",
+"PANGANDARAN": "JABAR",
+"KOTA BOGOR": "JABAR",
+"KOTA SUKABUMI": "JABAR",
+"KOTA BANDUNG": "JABAR",
+"KOTA CIREBON": "JABAR",
+"KOTA BEKASI": "JABAR",
+"KOTA DEPOK": "JABAR",
+"KOTA CIMAHI": "JABAR",
+"KOTA TASIKMALAYA": "JABAR",
+
+
+"JAKARTA PUSAT": "DKI",
+"JAKARTA UTARA": "DKI",
+"JAKARTA BARAT": "DKI",
+"JAKARTA SELATAN": "DKI",
+"JAKARTA TIMUR": "DKI",
+
+
+"TANGERANG": "TANGERANG",
+"LEBAK": "BANTEN",
+"PANDEGLANG": "BANTEN",
+
+
+};
+
+// Normalisasi jadi UPPERCASE semua key (kalau kamu tambahkan yang huruf campur)
+const kabToProvUpper = Object.fromEntries(
+  Object.entries(kabToProv).map(([k,v]) => [String(k).toUpperCase(), v])
+);
+</script>
+
+<!-- ====== SCRIPT: UTIL JUMLAH JERIGEN & DETAIL PESANAN ====== -->
+<script>
+// Baca jumlah jerigen dari localStorage ('jumlahJerigen' atau parsing 'paket')
+function getJumlahJerigen() {
+  const j = localStorage.getItem('jumlahJerigen');
+  if (j) {
+    const v = parseInt(j, 10);
+    if (!Number.isNaN(v) && v >= 1 && v <= 1000) return v;
+  }
+  const paket = (localStorage.getItem('paket') || '');
+  let m = paket.match(/(\d{1,2})\s*jerigen/i) || paket.match(/jerigen\s*(\d{1,2})/i);
+  if (m) {
+    const v = parseInt(m[1], 10);
+    if (v >= 1 && v <= 1000) return v;
+  }
+  const nums = paket.match(/\d+/g);
+  if (nums && nums.length) {
+    const last = parseInt(nums[nums.length - 1], 10);
+    if (last >= 1 && last <= 1000) return last;
+  }
+  return 0;
+}
+
+// Render ringkas detail pesanan dari localStorage (opsional, sama seperti punyamu)
+window.addEventListener('DOMContentLoaded', () => {
+  const produk = localStorage.getItem('produk');
+  const paket = localStorage.getItem('paket');
+  const kemasan = localStorage.getItem('kemasan');
+  const hargaProduk = parseInt(localStorage.getItem('hargaProduk')) || 0;
+  const biayaKemasan = parseInt(localStorage.getItem('biayaKemasan')) || 0;
+  const gambarProduk = localStorage.getItem('gambarProduk');
+  const gambarKemasan = localStorage.getItem('gambarKemasan');
+  const total = hargaProduk + biayaKemasan;
+
+  if (!produk || !paket) {
+    alert("Data pesanan tidak ditemukan. Silakan kembali ke halaman Order.");
+    window.location.href = "jerigen.html";
+    return;
+  }
+
+
+
+  
+  const detail = document.querySelector('.detail-teks');
+  if (detail) {
+    detail.innerHTML = `
+      <div class="item-pesanan">
+        <img src="${gambarProduk || ''}" alt="Produk">
+        <div class="info-pesanan">
+          <strong>${produk}</strong>
+          <p class="variasi">${paket}</p>
+          <p class="harga">Rp${hargaProduk.toLocaleString('id-ID')}</p>
+        </div>
+      </div>
+      <div class="item-pesanan">
+        <img src="${gambarKemasan || ''}" alt="Kemasan">
+        <div class="info-pesanan">
+          <strong>Pengemasan</strong>
+          <p class="variasi">${kemasan || '-'}</p>
+          <p class="harga">${biayaKemasan > 0 ? "Rp" + biayaKemasan.toLocaleString('id-ID') : "Gratis"}</p>
+        </div>
+      </div>
+      <div class="total">
+        Total Bayar: <span style="color:; font-weight:bold;">Rp${total.toLocaleString('id-ID')}</span>
+      </div>
+    `;
+  }
+});
+</script>
+
+<!-- ====== SCRIPT: HITUNG ONGKIR (SATU-SATUNYA YANG DIPAKAI) ====== -->
+<script>
+  function hitungOngkir() {
+    const kabupatenInput = document.getElementById('cariKabupaten');
+    const hargaEl = document.getElementById('ongkir');
+    const peringatanEl = document.getElementById('peringatanKurir');
+    if (!kabupatenInput || !hargaEl) return;
+  
+    // Ambil KAB & KEC (UPPERCASE)
+    const kabFull = (kabupatenInput.value || '').trim().toUpperCase(); 
+    const [kabKey, ...rest] = kabFull.split('/');
+    const kecKey = rest.join('/'); // bisa kosong jika tak ada "/"
+  
+    if (!kabKey) { hargaEl.textContent = 'Rp0'; if (peringatanEl) peringatanEl.style.display='none'; return; }
+  
+    const jumlah = (typeof getJumlahJerigen === 'function') ? getJumlahJerigen() : 0;
+    if (!jumlah) { hargaEl.textContent = 'Rp0'; if (peringatanEl) peringatanEl.style.display='none'; return; }
+  
+    // Tentukan provinsi dari kabupaten
+    const prov = kabToProvUpper[kabKey];
+    if (!prov || !provRates[prov]) {
+      hargaEl.textContent = 'Rp0';
+      if (peringatanEl) {
+        peringatanEl.textContent = 'Kabupaten ini belum memiliki tarif (hanya Jabar/Jateng/Jatim).';
+        peringatanEl.style.display = 'block';
+      }
+      return;
+    }
+    if (peringatanEl) peringatanEl.style.display = 'none';
+  
+    // ====== PILIH RATE: kecamatan → kabupaten → provinsi
+    let rate = null;
+  
+    // 1) override kecamatan?
+    if (kecKey && kecOverrides[`${kabKey}/${kecKey}`]) {
+      rate = kecOverrides[`${kabKey}/${kecKey}`];
+    }
+    // 2) override kabupaten?
+    else if (kabOverrides[kabKey]) {
+      rate = kabOverrides[kabKey];
+    }
+    // 3) default: tarif provinsi
+    else {
+      rate = provRates[prov];
+    }
+  
+    // Hitung ongkir
+    const ongkir = (jumlah <= 3) ? rate.flat1_3 : (rate.perJerigen * jumlah);
+    hargaEl.textContent = 'Rp' + ongkir.toLocaleString('id-ID');
+  }
+  </script>
+
+<script>
+  // ===== OVERRIDE TARIF KHUSUS =====
+  // 1) Override per-KECAMATAN (opsional, hanya jika ada yang spesial)
+  const kecOverrides = {
+    // contoh: KEDIRI/KANDANGAN lebih mahal
+    
+    "KEDIRI/KANDANGAN": { flat1_3: 80000, perJerigen: 22000 },
+    "BOGOR/SUKARAJA": {flat1_3: 99000, perJerigen: 27500},
+    "KUDUS/JATI": {flat1_3: 88000, perJerigen: 22500},
+    "SRAGEN/SUKODONO": {flat1_3: 99000, perJerigen: 25000},
+    
+  };
+  
+  // 2) Override per-KABUPATEN (berlaku untuk semua kecamatan di kabupaten tsb)
+  const kabOverrides = {
+    // contoh: semua kecamatan di KEDIRI beda tarif dari JATIM standar
+   // "KEDIRI": { flat1_3: 75000, perJerigen: 20000 },
+    // tambah kabupaten lain jika perlu...
+  };
+  </script>
+
+<!-- ====== SCRIPT: LANJUT KE PEMBAYARAN (VALIDASI & KIRIM WA) ====== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tombolBayar = document.querySelector(".tombol-lanjutkan");
+  if (!tombolBayar) return;
+
+  function angkaIDtoInt(str) {
+    return parseInt(String(str||"").replace(/[^\d]/g,"")) || 0;
+  }
+
+  tombolBayar.addEventListener("click", function () {
+    const nama   = document.querySelector('input[placeholder="Tulis nama anda"]');
+    const telp   = document.querySelector('input[placeholder="Tulis nomor telepon anda"]');
+    const alamat = document.querySelector('textarea[placeholder^="Alamat"]');
+    const inputs = document.querySelectorAll('.box input[type="text"], .box input[type="tel"], .box textarea');
+
+    // urutan: ... kecamatan (index 2), kelurahan (index 3); kabupaten pakai #cariKabupaten
+    const kecamatan = inputs[2];
+    const kabupaten = document.getElementById("cariKabupaten");
+    const kelurahan = inputs[3];
+
+    const wajib = [];
+    if (!nama || !nama.value.trim()) wajib.push({label:"Nama Penerima", el:nama});
+    const telv = (telp && telp.value || "").trim();
+    if (!telv) wajib.push({label:"Nomor Telepon Penerima", el:telp});
+    else if (!/^\d{9,15}$/.test(telv)) wajib.push({label:"Nomor Telepon tidak valid (9–15 digit angka)", el:telp});
+    if (!alamat || !alamat.value.trim()) wajib.push({label:"Alamat Lengkap", el:alamat});
+    if (!kecamatan || !kecamatan.value.trim()) wajib.push({label:"Kecamatan", el:kecamatan});
+    if (!kabupaten || !kabupaten.value.trim()) wajib.push({label:"Kabupaten (pilih dari daftar)", el:kabupaten});
+    if (!kelurahan || !kelurahan.value.trim()) wajib.push({label:"Kelurahan", el:kelurahan});
+
+    if (wajib.length > 0) {
+      alert("Lengkapi: \n- " + wajib.map(x => x.label).join("\n- "));
+      (wajib[0].el || document.body).focus();
+      return;
+    }
+
+    const kodePesanan  = document.querySelector("h3 > span.red")?.textContent || "";
+    const produk       = localStorage.getItem('produk') || "";
+    const paket        = localStorage.getItem('paket') || "";
+    const kemasan      = localStorage.getItem('kemasan') || "";
+    const hargaProduk  = parseInt(localStorage.getItem('hargaProduk')) || 0;
+    const biayaKemasan = parseInt(localStorage.getItem('biayaKemasan')) || 0;
+    const ongkirText   = document.getElementById("ongkir")?.textContent || "Rp0";
+    const totalBayar   = hargaProduk + biayaKemasan + angkaIDtoInt(ongkirText);
+
+    
+
+  
+  // PESAN KE WHATSAPP
+const kurirEl = document.querySelector('.box select');
+const kurir = (kurirEl?.value || kurirEl?.options[kurirEl.selectedIndex]?.text || '').trim();
+
+
+const ongkirNum = angkaIDtoInt(ongkirText);
+
+
+const pesan = `Nomor pesanan: ${kodePesanan}
+Halo, saya ingin melakukan pembayaran untuk pesanan berikut:
+
+Paket: ${produk} ${paket} Rp${(hargaProduk||0).toLocaleString('id-ID')}
+Pengiriman Dengan: ${kurir}
+Ongkos kirim: Rp${ongkirNum.toLocaleString('id-ID')}
+
+Nama Penerima: ${nama.value.trim()}
+Nomor Telp: ${telv}
+Alamat: ${alamat.value.trim()}
+Kecamatan: ${kecamatan.value.trim()}
+Kabupaten: ${kabupaten.value.trim()}
+
+Pengemasan:
+Paket: ${kemasan} Rp${(biayaKemasan||0).toLocaleString('id-ID')}
+
+*Total harga: Rp${(totalBayar||0).toLocaleString('id-ID')}*`;
+
+// Kirim ke WA
+const nomorWA = "6281228601369";
+const urlWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+window.open(urlWA, "_blank");
+  });
+});
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const inputKab = document.getElementById('cariKabupaten');
+    const listKab  = document.getElementById('daftarKabupaten');
+    const items    = () => Array.from(listKab.querySelectorAll('.dropdown-item'));
+    let activeIdx  = -1; // untuk highlight dengan keyboard
+  
+    function openList() {
+      listKab.style.display = 'block';
+    }
+    function closeList() {
+      listKab.style.display = 'none';
+      activeIdx = -1;
+      items().forEach(it => it.classList.remove('active'));
+    }
+  
+    function filterList(query) {
+      const q = (query || '').trim().toUpperCase();
+      let any = false;
+      items().forEach(it => {
+        const text = it.textContent.trim().toUpperCase();
+        const show = text.includes(q);
+        it.style.display = show ? 'block' : 'none';
+        if (show) any = true;
+      });
+      // kalau tidak ada hasil, tetap buka tapi tanpa item terlihat
+      listKab.style.display = 'block';
+      activeIdx = -1;
+    }
+  
+    function moveActive(delta) {
+      const visible = items().filter(it => it.style.display !== 'none');
+      if (visible.length === 0) return;
+      activeIdx = (activeIdx + delta + visible.length) % visible.length;
+      visible.forEach(it => it.classList.remove('active'));
+      const target = visible[activeIdx];
+      target.classList.add('active');
+      // scroll agar item aktif terlihat
+      const r = target.getBoundingClientRect();
+      const lr = listKab.getBoundingClientRect();
+      if (r.top < lr.top) listKab.scrollTop += r.top - lr.top;
+      if (r.bottom > lr.bottom) listKab.scrollTop += r.bottom - lr.bottom;
+    }
+  
+    function chooseActiveOrFirst() {
+      const visible = items().filter(it => it.style.display !== 'none');
+      if (visible.length === 0) return;
+      const chosen = (activeIdx >= 0) ? visible[activeIdx] : visible[0];
+      inputKab.value = chosen.textContent.trim();
+      closeList();
+      if (typeof hitungOngkir === 'function') hitungOngkir();
+    }
+  
+    // Buka/tutup dengan klik
+    inputKab.addEventListener('focus', () => { openList(); filterList(inputKab.value); });
+    inputKab.addEventListener('click', () => { openList(); filterList(inputKab.value); });
+  
+    // Ketik untuk filter
+    inputKab.addEventListener('input', () => {
+      openList();
+      filterList(inputKab.value);
+    });
+  
+    // Navigasi keyboard
+    inputKab.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') { e.preventDefault(); openList(); moveActive(1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); openList(); moveActive(-1); }
+      else if (e.key === 'Enter') { e.preventDefault(); chooseActiveOrFirst(); }
+      else if (e.key === 'Escape') { closeList(); }
+    });
+  
+    // Klik item
+    listKab.addEventListener('click', (e) => {
+      const it = e.target.closest('.dropdown-item');
+      if (!it) return;
+      inputKab.value = it.textContent.trim();
+      closeList();
+      if (typeof hitungOngkir === 'function') hitungOngkir();
+    });
+  
+    // Klik di luar untuk menutup
+    document.addEventListener('click', (e) => {
+      if (!listKab.contains(e.target) && e.target !== inputKab) closeList();
+    });
+  });
+  </script>
+
+<script>feather.replace();</script>
+
+
+</body>
+</html>
+
+
+

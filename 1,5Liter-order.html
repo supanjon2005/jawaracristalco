@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jawara Cristal</title>
+
+     <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="checkout-style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chekout-jerigen-style.css" />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+            <img src="poto produk/logo putih.PNG" alt="Logo" width="80px">
+            <h1>JAWARA CRISTAL</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Produk</a></li>
+                    <li><a href="https://www.instagram.com/jawara.cristal">Testimoni</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="order-section">
+        <div class="container">
+            <h2>Form Pemesanan</h2>
+            <div class="order-form">
+                <div class="product-info">
+                    <h3>Produk yang Dipilih</h3>
+                    <div class="product-details">
+                        <img src="poto produk/1,5 LITER.png" alt="Original Basic" />
+                        <div>
+                            <h4>1,5 Liter</h4>
+                            <p>Harga: <span id="hargaProduk">Pilih paket untuk melihat harga</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label>Variasi Paket Btl:</label>
+                                                 <div class="paket-container">
+                             <button type="button" onclick="pilihPaket(this)" data-paket="1,5Liter" data-harga="45000">1,5 Liter</button>
+                             
+                         </div>
+                    </div>
+
+                    <div class="form-group">
+    <label>Jumlah:</label>
+    <div class="jumlah-container">
+        <button type="button" onclick="ubahJumlah(-1)">-</button>
+       <input type="number" id="jumlahProduk" value="1" min="1" max="20" 
+       onfocus="clearJumlah(this)" 
+       onblur="resetJumlah(this)" 
+       oninput="ubahJumlahKetik(this)" />
+        <button type="button" onclick="ubahJumlah(1)">+</button>
+    </div>
+</div>
+
+                                         <div class="form-group">
+                         <label>Pengemasan:</label>
+                         <div class="kemasan-container">
+                             <button type="button" onclick="pilihKemasan(this)" data-kemasan="Pengemasan biasa" data-biaya="0">Pengemasan biasa</button>
+                             <button type="button" onclick="pilihKemasan(this)" data-kemasan="Kawat" data-biaya="15000">Kawat</button>
+                             <button type="button" onclick="pilihKemasan(this)" data-kemasan="Kayu" data-biaya="35000">Kayu</button>
+                         </div>
+                     </div>
+
+
+                     <p class="note-warning">
+                        ⚠ <strong>Wajib menggunakan pengemasan Kawat/Kayu.</strong> Kami tidak menerima komplain barang hilang jika menggunakan pengemasan biasa.
+                    </p>
+
+                    
+
+                        <div class="order-summary">
+  <h4>Ringkasan Pesanan:</h4>
+  <div class="summary-product">
+    <div class="summary-images" id="summaryImages">
+      <div class="product-image">
+        <img id="imgProduk" src="poto produk/1,5 LITER.png" alt="Produk" />
+        <p class="image-label">Produk</p>
+      </div>
+      <div class="packaging-image">
+        <img id="imgKemasan" src="poto produk/biasa.jpeg" alt="Kemasan" />
+        <p class="image-label">Kemasan</p>
+      </div>
+    </div>
+    <div class="summary-details">
+  <p>Produk: <span id="summaryProduk">1,5 Liter</span></p>
+  <p>Paket: <span id="summaryJumlah">1</span> BTL</p>
+  <p>Harga Produk: <span id="summaryHargaProduk">Rp0</span></p>
+  <p>Pengemasan: <span id="summaryKemasan">-</span></p>
+  <p>Biaya Pengemasan: <span id="summaryBiayaKemasan">Rp0</span></p>
+
+  <!-- Garis pemisah -->
+  <hr style="margin:10px 0; border:1px solid #ccc;">
+
+  <!-- Total lebih ke bawah & tebal -->
+  <p style="margin-top:10px; font-size:16px; font-weight:bold;">
+    Total: <span id="summaryTotal">Rp0</span>
+  </p>
+</div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+                                           
+                      <button class="confirm-button" type="button" onclick="orderSekarangjerigen()">Order Sekarang</button>
+                      
+                 </form>
+             </div>
+         </div>
+     </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jawara Cristal. All rights reserved.</p>
+        </div>
+
+        <div id="popupMax" style="display:none;">
+            <div class="box">
+              <div class="hdr">
+                <span class="icon">⚠</span>
+                <span class="title">Peringatan</span>
+              </div>
+              <div class="msg">
+                Sudah Melewati Batas Maksimal
+              </div>
+              <div class="actions">
+                <button onclick="document.getElementById('popupMax').style.display='none'">OK</button>
+              </div>
+            </div>
+          </div>
+    </footer>
+
+    <script>
+        let paketDipilih = '';
+        let kemasanDipilih = '';
+        let hargaDipilih = '';
+        let biayaKemasan = 0;
+        let jumlahBeli = 1;
+
+        function pilihPaket(btn) {
+            document.querySelectorAll('.paket-container button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            paketDipilih = btn.getAttribute('data-paket');
+            hargaDipilih = btn.getAttribute('data-harga');
+            updateSummary();
+        }
+
+        function pilihKemasan(btn) {
+            document.querySelectorAll('.kemasan-container button').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            kemasanDipilih = btn.getAttribute('data-kemasan');
+            biayaKemasan = parseInt(btn.getAttribute('data-biaya')) || 0;
+            updateSummary();
+        }
+
+        
+
+
+
+
+
+
+
+
+        function updateProductImage() {
+            const productImage = document.querySelector('.product-image img');
+            const packagingImage = document.querySelector('.packaging-image img');
+            
+            // Foto produk tetap sama
+            productImage.src = 'poto produk/1,5 LITER.png';
+            
+            // Foto kemasan berubah sesuai pilihan
+            if (kemasanDipilih === 'Kawat') {
+                packagingImage.src = 'poto produk/packing kawat.jpg';
+            } else if (kemasanDipilih === 'Kayu') {
+                packagingImage.src = 'poto produk/packing kayu.jpeg';
+            } else {
+                packagingImage.src = 'poto produk/biasa.jpeg';
+            }
+        }
+
+        function formatHarga(harga) {
+            return 'Rp' + parseInt(harga).toLocaleString('id-ID');
+        }
+
+        function kirimPesanan() {
+            const nama = document.getElementById('nama').value;
+            const telepon = document.getElementById('telepon').value;
+            const alamat = document.getElementById('alamat').value;
+            const catatan = document.getElementById('catatan').value;
+
+            if (!nama || !telepon || !alamat) {
+                alert('Mohon lengkapi data pemesanan!');
+                return;
+            }
+
+            if (!paketDipilih || !kemasanDipilih) {
+                alert('Mohon pilih paket dan pengemasan!');
+                return;
+            }
+
+            if (!hargaDipilih) {
+                alert('Mohon pilih paket untuk melihat harga!');
+                return;
+            }
+
+            let pesan = `Halo, saya ingin memesan:\n\n`;
+            pesan += `*Produk:* Original Basic\n`;
+            pesan += `*Paket:* ${paketDipilih}\n`;
+            pesan += `*Pengemasan:* ${kemasanDipilih}`;
+            if (biayaKemasan > 0) {
+                pesan += ` (+${formatHarga(biayaKemasan)})`;
+            }
+            pesan += `\n`;
+            const totalHarga = parseInt(hargaDipilih) + biayaKemasan;
+            pesan += `*Harga:* ${formatHarga(totalHarga)}\n\n`;
+            pesan += `*Data Pemesan:*\n`;
+            pesan += `Nama: ${nama}\n`;
+            pesan += `Telepon: ${telepon}\n`;
+            pesan += `Alamat: ${alamat}\n`;
+            
+            if (catatan) {
+                pesan += `Catatan: ${catatan}\n`;
+            }
+
+            const linkWA = `https://wa.me/6281228601369?text=${encodeURIComponent(pesan)}`;
+            window.open(linkWA, '_blank');
+        }
+
+
+
+
+
+    </script>
+
+
+<script>
+    function ubahJumlah(angka) {
+      // kalau sudah 20 dan mau tambah lagi -> tampilkan popup & batal
+      if (angka > 0 && jumlahBeli >= 100000) {
+        document.getElementById('popupMax').style.display = 'block';
+        return;
+      }
+    
+      jumlahBeli += angka;
+    
+      // minimal 1
+      if (jumlahBeli < 1) jumlahBeli = 1;
+    
+      
+      
+    
+      // update UI
+      document.getElementById("jumlahProduk").value = jumlahBeli;
+      updateSummary();
+    }
+
+    function ubahJumlahKetik(input) {
+  let val = parseInt(input.value);
+
+  // kalau kosong, pakai default 1
+  if (isNaN(val) || val < 1) {
+    val = 1;
+  }
+  
+  if (val > 10000) {
+    val = 10000;
+    document.getElementById('popupMax').style.display = 'block';
+  }
+
+  jumlahBeli = val;
+  input.value = jumlahBeli;
+  updateSummary();
+}
+
+   
+function clearJumlah(input) {
+  // Kosongkan input saat pertama kali fokus
+  if (input.value === "1") {
+    input.value = "";
+  }
+}
+
+function resetJumlah(input) {
+  // Kalau dikosongkan lalu keluar dari input → set default ke 1
+  if (input.value === "" || parseInt(input.value) < 1) {
+    input.value = 1;
+    jumlahBeli = 1;
+    updateSummary();
+  }
+}
+
+
+
+
+
+
+    function updateSummary() {
+  document.getElementById('summaryProduk').textContent = paketDipilih || '1,5 Liter';
+  document.getElementById('summaryJumlah').textContent = jumlahBeli;
+  document.getElementById('summaryKemasan').textContent = kemasanDipilih || '-';
+
+  // Hitung harga produk per botol
+  let hargaPerjerigen = parseInt(hargaDipilih) || 0;
+  if (jumlahBeli >= 5) {
+    hargaPerjerigen = 40000; 
+  } else {
+    hargaPerjerigen = 45000;
+  }
+document.getElementById('hargaProduk').textContent = formatHarga(hargaPerjerigen) + ' / btl';
+
+  const totalProduk = hargaPerjerigen * jumlahBeli;
+
+  // Hitung biaya kemasan
+  let biayaKemas = 0;
+  if (kemasanDipilih === 'Kawat') {
+    biayaKemas = Math.ceil(jumlahBeli / 15) * 15000;
+    document.getElementById('imgKemasan').src = 'poto produk/packing kawat.jpg';
+  } else if (kemasanDipilih === 'Kayu') {
+    biayaKemas = Math.ceil(jumlahBeli / 15) * 35000;
+    document.getElementById('imgKemasan').src = 'poto produk/packing kayu.jpeg';
+  } else {
+    document.getElementById('imgKemasan').src = 'poto produk/biasa.jpeg';
+  }
+
+  biayaKemasan = biayaKemas;
+
+  // Update ringkasan
+  document.getElementById('summaryHargaProduk').textContent = formatHarga(totalProduk);
+  document.getElementById('summaryBiayaKemasan').textContent = formatHarga(biayaKemasan);
+  document.getElementById('summaryTotal').textContent = formatHarga(totalProduk + biayaKemasan);
+
+  // Gambar produk selalu sama
+  document.getElementById('imgProduk').src = 'poto produk/1,5 LITER.png';
+
+}
+
+
+
+
+window.onload = function() {
+  // Pilih otomatis paket & kemasan (punyamu sudah benar)
+  const paketDefault = document.querySelector('.paket-container button[data-paket="1,5Liter"]');
+  if (paketDefault) pilihPaket(paketDefault);
+
+  const kemasanDefault = document.querySelector('.kemasan-container button[data-kemasan="Pengemasan biasa"]');
+  if (kemasanDefault) pilihKemasan(kemasanDefault);
+
+  // Set jumlah awal & sinkron UI
+  jumlahBeli = 1;
+  document.getElementById("jumlahProduk").value = jumlahBeli;
+  updateSummary();
+};
+</script>
+
+<script>
+function orderSekarangjerigen() {
+  // Validasi pilihan
+  if (!paketDipilih) { alert('Mohon pilih paket jerigen.'); return; }
+  if (!kemasanDipilih) { alert('Mohon pilih pengemasan.'); return; }
+
+  // Tentukan harga per jerigen sesuai jumlah
+  let hargaPerjerigen = (jumlahBeli >= 5) ? 40000 : 45000;
+  const subtotalProduk = hargaPerjerigen * jumlahBeli;
+
+  // Path gambar kemasan
+  let gambarKemasanPath = 'poto produk/biasa.jpeg';
+  if (kemasanDipilih === 'Kawat') gambarKemasanPath = 'poto produk/packing kawat.jpg';
+  if (kemasanDipilih === 'Kayu')  gambarKemasanPath = 'poto produk/packing kayu.jpeg';
+
+  // Simpan data ke localStorage
+  localStorage.setItem('produk', '1,5 Liter');
+  localStorage.setItem('paket', `${paketDipilih} x ${jumlahBeli}`);
+  localStorage.setItem('jumlahjerigen', String(jumlahBeli));
+  
+  localStorage.setItem('kemasan', kemasanDipilih);
+  localStorage.setItem('hargaProduk', String(subtotalProduk));
+  localStorage.setItem('biayaKemasan', String(biayaKemasan));
+  localStorage.setItem('gambarProduk', 'poto produk/1,5 LITER.png');
+  localStorage.setItem('gambarKemasan', gambarKemasanPath);
+     // ← tambahkan baris ini
+
+
+  // Pindah ke halaman checkout
+  window.location.href = '1,5Liter-checkout.html';
+}
+
+
+</script>
+
+<script>
+function bukaPopup(pesan){
+  if(pesan) document.getElementById('popupMessage').innerHTML = pesan;
+  document.getElementById('popupMax').style.display = 'block';
+}
+function tutupPopup(){
+  document.getElementById('popupMax').style.display = 'none';
+}
+
+
+</script>
+
+
+
+</body>
+</html>
